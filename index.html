@@ -1,0 +1,2021 @@
+﻿﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2BStays — Hotel B2B Operations Platform | Agent Bookings, City Ledger & Fleet</title>
+<meta name="description" content="B2BStays gives hotel teams one platform to manage travel agent bookings, city ledger, commission payable, fleet, WhatsApp campaigns and vendor coordination. Built for hotel B2B operations.">
+<meta name="keywords" content="hotel B2B platform, travel agent booking software, city ledger software, hotel commission management, hotel fleet management, B2B hotel operations, hotel vendor management, WhatsApp hotel marketing">
+<meta name="author" content="B2BStays">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.b2bstays.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.b2bstays.com/">
+<meta property="og:title" content="B2BStays — Hotel B2B Operations Platform">
+<meta property="og:description" content="One platform for hotel teams to manage travel agents, settle commissions, run transport, send campaigns and coordinate vendors. Built specifically for hotel B2B workflows.">
+<meta property="og:image" content="https://www.b2bstays.com/imgs/Global B2B Travel Network.png">
+<meta property="og:site_name" content="B2BStays">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="B2BStays — Hotel B2B Operations Platform">
+<meta name="twitter:description" content="One platform for hotel teams to manage travel agents, settle commissions, run transport, send campaigns and coordinate vendors.">
+<meta name="twitter:image" content="https://www.b2bstays.com/imgs/Global B2B Travel Network.png">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "B2BStays",
+  "url": "https://www.b2bstays.com",
+  "description": "Hotel B2B operations platform for managing travel agent bookings, city ledger, commissions, fleet, campaigns and vendor coordination.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "INR",
+    "description": "Free demo available"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "B2BStays",
+    "url": "https://www.b2bstays.com"
+  },
+  "featureList": [
+    "Agent Bookings Management",
+    "City Ledger",
+    "Commission Payable",
+    "Group Quotations",
+    "Fleet & Transportation Management",
+    "WhatsApp Campaigns",
+    "Vendor Management",
+    "Staff Alerts",
+    "Analytics"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;500;600;700&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f7f6ff;--bg2:#f0eeff;--white:#fff;
+  --purple:#5b3de8;--purple2:#7c5cf4;--purple-pale:#ede9ff;--purple-dim:#d4ccf7;
+  --navy:#18134a;--mid:#4b4580;--muted:#6b6899;--muted2:#9b98b8;
+  --line:rgba(91,61,232,.1);--line2:rgba(91,61,232,.06);
+  --green:#16a34a;--amber:#d97706;--rose:#dc2626;
+  --r:10px;--r-lg:16px;--r-xl:22px;
+}
+html{scroll-behavior:smooth;scrollbar-gutter:stable;overflow-y:scroll}
+a,button,.ps-tab,.pp-f,.pp-btn,.mod-card,.feat-card,.setup-step,.d-item,.d-qa,.ledger-acc{transition:all .18s ease}
+body{font-family:'Roboto',system-ui,sans-serif;background:var(--white);color:var(--navy);font-size:15px;line-height:1.6;overflow-x:hidden;font-variant-numeric:tabular-nums}
+h1,h2,h3,h4{font-family:'Roboto Slab','Georgia',serif;line-height:1.1;letter-spacing:-.01em}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer}
+svg{display:block;flex-shrink:0}
+
+/* ── NAVBAR ── */
+.site-nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9000;width:calc(100% - 48px);max-width:1080px}
+.site-nav-inner{background:rgba(255,255,255,.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid var(--line2);border-radius:100px;padding:8px 10px 8px 18px;display:flex;align-items:center;box-shadow:0 4px 24px rgba(91,61,232,.10);position:relative}
+.site-nav-inner::after{content:'';position:absolute;bottom:-1px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(91,61,232,.22),transparent)}
+.nav-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;margin-right:8px}
+.nav-logo-badge{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--purple),var(--purple2));display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(91,61,232,.3)}
+.nav-logo-name{font-family:'Roboto Slab','Georgia',serif;font-size:17px;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
+.nav-link{font-size:13px;font-weight:500;color:var(--mid);padding:7px 13px;border-radius:100px;transition:all .15s;white-space:nowrap}
+.nav-link:hover,.nav-link.active{background:var(--purple-pale);color:var(--purple)}
+.nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:8px}
+.nav-login{font-size:13px;font-weight:500;color:var(--mid);padding:8px 16px;border-radius:100px;transition:all .15s}
+.nav-login:hover{color:var(--navy)}
+.nav-cta{background:var(--purple);color:#fff;font-size:13px;font-weight:500;padding:8px 20px;border-radius:100px;border:none;cursor:pointer;transition:all .18s;box-shadow:0 3px 14px rgba(91,61,232,.24);text-decoration:none;display:inline-block}
+.nav-cta:hover{background:var(--purple2);transform:translateY(-1px);box-shadow:0 5px 18px rgba(91,61,232,.34)}
+@media(max-width:768px){
+  .site-nav{width:calc(100% - 24px);top:10px}
+  .nav-links{display:none}
+  .nav-login{display:none}
+}
+/* ── FOOTER ── */
+.site-footer{background:transparent;font-size:13px;padding:0;position:relative;z-index:1;margin-top:-80px}
+.site-footer-inner{background:var(--white);border-radius:24px 24px 0 0;margin:0;padding:120px 56px 32px;position:relative;z-index:1}
+.footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand-row{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.footer-badge{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--purple),var(--purple2));display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.footer-name{font-family:'Roboto Slab','Georgia',serif;font-size:18px;font-weight:700;color:var(--navy);letter-spacing:-.01em}
+.footer-tagline{font-size:12.5px;line-height:1.7;color:var(--muted);max-width:210px}
+.footer-col-h{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted2);margin-bottom:14px}
+.footer-col a{display:block;color:var(--mid);font-size:13px;padding:4px 0;transition:color .15s;text-decoration:none}
+.footer-col a:hover{color:var(--purple)}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:20px;border-top:1px solid var(--line2);gap:16px;flex-wrap:wrap}
+.footer-copy{font-size:12px;color:var(--muted2)}
+.footer-bottom-links{display:flex;gap:24px}
+.footer-bottom-links a{font-size:12px;color:var(--muted2);transition:color .15s;text-decoration:none}
+.footer-bottom-links a:hover{color:var(--purple)}
+@media(max-width:700px){
+  .site-footer{padding:32px 20px 20px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+}
+/* ── BUTTONS ── */
+.btn-p{background:var(--purple);color:#fff;padding:12px 28px;border-radius:100px;font-size:14px;font-weight:500;border:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;box-shadow:0 4px 20px rgba(91,61,232,.28);position:relative;overflow:hidden}
+.btn-p:hover{background:var(--purple2);transform:translateY(-1px);box-shadow:0 6px 28px rgba(91,61,232,.38)}
+.btn-o{background:transparent;color:var(--navy);padding:11px 24px;border-radius:100px;font-size:14px;font-weight:500;border:1.5px solid var(--line);display:inline-flex;align-items:center;gap:8px;transition:all .2s}
+.btn-o:hover{border-color:var(--purple);color:var(--purple);background:var(--purple-pale)}
+
+/* â”€â”€ HERO â”€â”€ */
+.hero{background:var(--white);padding:120px 56px 0;position:relative;overflow:hidden}
+.hero-grad{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 0%,rgba(91,61,232,.07) 0%,transparent 55%),radial-gradient(ellipse at 10% 80%,rgba(124,92,244,.05) 0%,transparent 50%);pointer-events:none}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:flex;flex-direction:column}
+/* Hero top: 2-column */
+.hero-top-row{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;margin-bottom:36px}
+.hero-text-col{min-width:0}
+.hero h1{max-width:100%}
+.hero-sub{max-width:440px}
+.hero-actions{justify-content:flex-start}
+/* Hero image column */
+.hero-img-col{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--purple-dim);width:calc(100% + 60px);max-width:none}
+.hero-img-col video{width:100%;display:block;border-radius:20px}
+/* Hero Platform */
+.hero-plat{width:100%;margin-top:0}
+.hero-plat-bar{background:var(--bg);border:1px solid var(--line);border-bottom:1px solid var(--line2);border-radius:var(--r-xl) var(--r-xl) 0 0;padding:11px 20px;display:flex;align-items:center;gap:7px;box-shadow:0 -2px 0 var(--purple-dim),0 0 0 6px rgba(91,61,232,.04)}
+.hero-plat>.pages-layout{border-radius:0 0 0 0;box-shadow:0 24px 64px rgba(91,61,232,.09)}
+.hero-eye{display:inline-flex;align-items:center;gap:8px;background:var(--purple-pale);border:1px solid var(--purple-dim);border-radius:100px;padding:5px 16px;font-size:11px;font-weight:600;color:var(--purple);letter-spacing:.07em;text-transform:uppercase;margin-bottom:28px}
+.hero-dot{width:5px;height:5px;background:var(--purple);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-size:clamp(34px,4.8vw,70px);color:var(--navy);max-width:820px;margin-bottom:20px;font-weight:700}
+.hero h1 em{color:var(--purple)}
+.hero-h2-type{font-size:clamp(20px,2.2vw,28px);color:var(--navy);font-weight:500;margin-bottom:20px;line-height:1.4;font-family:'Roboto Slab','Georgia',serif;min-height:2.8em}
+.hero-cursor{color:var(--purple);animation:blink .7s step-end infinite;font-weight:300}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-sub{font-size:16px;color:var(--muted);max-width:480px;margin-bottom:40px;line-height:1.7;font-weight:400;min-height:calc(1.7em * 3)}
+.hero-actions{display:flex;gap:12px;margin-bottom:28px}
+/* Dashboard */
+.dash-wrap{width:100%;max-width:1100px;margin:0 auto}
+.dash{background:var(--white);border:1px solid var(--line);border-radius:var(--r-xl) var(--r-xl) 0 0;overflow:hidden;box-shadow:0 -2px 0 var(--purple-dim),0 0 0 6px rgba(91,61,232,.04),0 24px 64px rgba(91,61,232,.09)}
+.dash-bar{background:var(--bg);border-bottom:1px solid var(--line2);padding:11px 20px;display:flex;align-items:center;gap:7px}
+.d{width:9px;height:9px;border-radius:50%}.d.r{background:#ff5f57}.d.y{background:#febc2e}.d.g{background:#28c840}
+.dash-url{flex:1;margin:0 14px;background:var(--white);border:1px solid var(--line2);border-radius:6px;padding:4px 12px;font-size:11px;color:var(--muted)}
+.dash-body{display:grid;grid-template-columns:210px 1fr 270px;min-height:440px}
+/* Sidebar */
+.d-side{border-right:1px solid var(--line2);background:var(--bg);padding:16px 0}
+.d-logo{display:flex;align-items:center;gap:8px;padding:0 14px 14px;font-size:13px;font-weight:600;color:var(--navy);border-bottom:1px solid var(--line2);margin-bottom:10px}
+.d-logo-sq{width:24px;height:24px;border-radius:6px;background:linear-gradient(135deg,var(--purple),var(--purple2));display:flex;align-items:center;justify-content:center}
+.d-grp{padding:0 8px}
+.d-lbl{font-size:10px;font-weight:600;color:var(--muted2);text-transform:uppercase;letter-spacing:.08em;padding:10px 8px 4px}
+.d-item{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:7px;font-size:12px;font-weight:500;color:var(--mid);cursor:pointer;transition:all .12s}
+.d-item.on{background:var(--purple-pale);color:var(--purple)}
+.d-item:hover:not(.on){background:var(--bg2)}
+.d-item svg{width:13px;height:13px;flex-shrink:0}
+/* Main */
+.d-main{padding:22px;overflow:hidden}
+.d-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.d-title{font-family:'Roboto Slab','Georgia',serif;font-size:18px;font-weight:600;color:var(--navy)}
+.d-period{font-size:11px;font-weight:500;color:var(--muted);background:var(--bg);border:1px solid var(--line2);padding:4px 12px;border-radius:100px}
+.d-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.d-stat{background:var(--white);border:1px solid var(--line2);border-radius:var(--r);padding:14px 16px}
+.d-stat-n{font-size:22px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums;letter-spacing:-.02em;font-family:'Inter',system-ui,sans-serif}
+.d-stat-l{font-size:11px;color:var(--muted);margin-top:2px}
+.d-stat-b{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:600;padding:2px 7px;border-radius:100px;margin-top:6px}
+.bg{background:rgba(22,163,74,.1);color:#16a34a}.bp{background:var(--purple-pale);color:var(--purple)}.ba{background:rgba(217,119,6,.09);color:#d97706}
+.d-table{border:1px solid var(--line2);border-radius:var(--r);overflow:hidden}
+.d-th{display:grid;grid-template-columns:1.4fr .9fr .8fr .9fr 90px;padding:8px 14px;background:var(--bg);font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--line2)}
+.d-tr{display:grid;grid-template-columns:1.4fr .9fr .8fr .9fr 90px;padding:9px 14px;font-size:12px;border-bottom:1px solid var(--line2);align-items:center;transition:background .1s}
+.d-tr:last-child{border-bottom:none}
+.d-tr:hover{background:var(--bg)}
+.d-an{font-size:12px;font-weight:600;color:var(--navy)}
+.d-as{font-size:10px;color:var(--muted);margin-top:1px}
+.st{display:inline-flex;padding:2px 9px;border-radius:100px;font-size:11px;font-weight:600}
+.stc{background:rgba(22,163,74,.1);color:#16a34a}.stp{background:rgba(217,119,6,.09);color:#d97706}.stn{background:var(--purple-pale);color:var(--purple)}
+/* Right panel */
+.d-right{border-left:1px solid var(--line2);padding:20px;background:var(--bg)}
+.d-right-h{font-size:12px;font-weight:700;color:var(--navy);margin-bottom:12px;letter-spacing:-.01em}
+.d-sum{background:var(--white);border:1px solid var(--line2);border-radius:var(--r);padding:14px;margin-bottom:14px}
+.d-sum-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--line2);font-size:12px}
+.d-sum-row:last-child{border-bottom:none;padding-bottom:0}
+.d-sum-row:first-child{padding-top:0}
+.d-sum-l{color:var(--muted)}
+.d-sum-v{font-weight:600;color:var(--navy)}
+.d-qa{display:flex;align-items:center;gap:9px;padding:9px 11px;background:var(--white);border:1px solid var(--line2);border-radius:var(--r);font-size:12px;font-weight:500;color:var(--navy);cursor:pointer;margin-bottom:7px;transition:all .12s}
+.d-qa:hover{border-color:var(--purple);color:var(--purple);background:var(--purple-pale)}
+.d-qa-i{width:26px;height:26px;border-radius:6px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.d-qa-i svg{width:13px;height:13px}
+
+/* â”€â”€ SCROLL STRIP â”€â”€ */
+.strip{overflow:hidden;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);background:var(--white)}
+.strip-track{display:flex;animation:sl 26s linear infinite;white-space:nowrap}
+.strip-track:hover{animation-play-state:paused}
+@keyframes sl{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.s-item{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-size:13px;font-weight:500;color:var(--mid);border-right:1px solid var(--line2);flex-shrink:0}
+.s-dot{width:4px;height:4px;border-radius:50%;background:var(--purple)}
+
+/* â”€â”€ FEATURES â”€â”€ */
+.features{background:var(--bg);padding:72px 56px}
+.sec-in{max-width:1100px;margin:0 auto}
+.sec-eye{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--purple);margin-bottom:16px}
+.sec-eye::before{content:'';width:18px;height:1.5px;background:var(--purple);border-radius:2px}
+.sec-h{font-size:clamp(28px,3.2vw,44px);color:var(--navy);font-weight:700;text-wrap:balance}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;margin-top:32px;background:var(--line)}
+.feat-card{background:var(--white);padding:36px 32px;display:flex;flex-direction:column;gap:16px}
+.feat-num{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--purple)}
+.feat-h{font-family:'Roboto Slab','Georgia',serif;font-size:18px;font-weight:600;color:var(--navy)}
+.feat-desc{font-size:13px;color:var(--muted);line-height:1.6}
+/* mini graphics */
+.mini-graphic{background:var(--bg);border:1px solid var(--line2);border-radius:var(--r);padding:12px;margin-top:4px}
+.mini-row{display:flex;align-items:center;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line2);font-size:11px}
+.mini-row:last-child{border-bottom:none;padding-bottom:0}
+.mini-row:first-child{padding-top:0}
+.mini-label{color:var(--muted);font-weight:500}
+.mini-val{font-weight:600;color:var(--navy)}
+.mini-badge{display:inline-flex;padding:1px 7px;border-radius:100px;font-size:10px;font-weight:600}
+.mini-stat-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mini-stat{background:var(--white);border:1px solid var(--line2);border-radius:8px;padding:10px 12px}
+.mini-stat-n{font-size:18px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
+.mini-stat-l{font-size:10px;color:var(--muted)}
+.mini-bar-row{display:flex;flex-direction:column;gap:7px}
+.mini-bar-item{display:flex;flex-direction:column;gap:3px}
+.mini-bar-top{display:flex;justify-content:space-between;font-size:10px}
+.mini-bar-label{color:var(--muted)}
+.mini-bar-val{font-weight:600;color:var(--navy)}
+.mini-bar-track{height:5px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.mini-bar-fill{height:100%;border-radius:100px;background:var(--purple)}
+.mini-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.mini-cal-cell{aspect-ratio:1;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:500;color:var(--muted);background:var(--white)}
+.mini-cal-cell.booked{background:var(--purple);color:#fff}
+.mini-cal-cell.partial{background:var(--purple-pale);color:var(--purple)}
+.mini-tag-row{display:flex;flex-wrap:wrap;gap:6px}
+.mini-tag{padding:3px 10px;border-radius:100px;font-size:11px;font-weight:500;background:var(--purple-pale);color:var(--purple)}
+/* feat-card image bg */
+.feat-card{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative}
+.feat-card::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.93);pointer-events:none;z-index:0}
+.feat-card>*{position:relative;z-index:1}
+.feat-card .feat-h{color:#0f0d2e}
+.feat-card .feat-desc{color:#1a1640}
+.feat-card .mini-label{color:#2a2560}
+.feat-card .mini-val{color:#0f0d2e}
+.feat-card .mini-bar-label{color:#2a2560}
+.feat-card .mini-bar-val{color:#0f0d2e}
+.feat-card .mini-stat-l{color:#2a2560}
+.feat-card .mini-stat-n{color:#0f0d2e}
+.fc-1{background-image:url('imgs/img-travel agents.png')}
+.fc-2{background-image:url('imgs/img- city ledger.png')}
+.fc-3{background-image:url('imgs/img- packages.png')}
+.fc-4{background-image:url('imgs/img- fleet.png')}
+.fc-5{background-image:url('imgs/img- marketing.png')}
+.fc-6{background-image:url('imgs/img-vendor.png')}
+
+/* â”€â”€ WORKING PAGES â”€â”€ */
+.pages-sec{background:var(--white);padding:72px 56px}
+.pages-in{max-width:1100px;margin:0 auto}
+.pages-layout{display:grid;grid-template-columns:220px 1fr;gap:0;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;margin-top:32px;min-height:560px;box-shadow:0 8px 40px rgba(91,61,232,.07)}
+.pages-sidebar{background:var(--bg);border-right:1px solid var(--line2);padding:16px 0}
+.ps-grp-lbl{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted2);padding:12px 16px 5px}
+.ps-tab{display:flex;align-items:center;gap:9px;padding:8px 12px;margin:0 8px;border-radius:8px;font-size:12px;font-weight:500;color:var(--mid);cursor:pointer;transition:all .12s}
+.ps-tab.active{background:var(--purple-pale);color:var(--purple)}
+.ps-tab:hover:not(.active){background:var(--bg2);color:var(--navy)}
+.ps-tab svg{width:13px;height:13px;flex-shrink:0}
+.pages-content{padding:0;position:relative}
+.page-panel{display:none;flex-direction:column;height:100%}
+.page-panel.active{display:flex}
+.pp-head{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--line2);background:var(--white)}
+.pp-title{font-family:'Roboto Slab','Georgia',serif;font-size:17px;font-weight:600;color:var(--navy)}
+.pp-actions{display:flex;gap:8px}
+.pp-btn{padding:6px 14px;border-radius:7px;font-size:12px;font-weight:500;border:1px solid var(--line);background:var(--white);color:var(--mid);cursor:pointer;transition:all .12s}
+.pp-btn:hover{border-color:var(--purple-dim);color:var(--purple)}
+.pp-btn.primary{background:var(--purple);color:#fff;border-color:var(--purple)}
+.pp-btn.primary:hover{background:var(--purple2)}
+.pp-body{padding:20px 24px;flex:1;overflow:auto}
+.pp-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.pp-stat{background:var(--bg);border:1px solid var(--line2);border-radius:var(--r);padding:14px}
+.pp-stat-n{font-size:20px;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums;font-family:'Inter',system-ui,sans-serif}
+.pp-stat-l{font-size:11px;color:var(--muted);margin-top:2px}
+.pp-filters{display:flex;gap:7px;margin-bottom:16px;flex-wrap:wrap}
+.pp-f{padding:5px 14px;border-radius:100px;font-size:12px;font-weight:500;border:1px solid var(--line);background:var(--white);color:var(--muted);cursor:pointer;transition:all .12s}
+.pp-f.on{background:var(--purple-pale);color:var(--purple);border-color:var(--purple-dim)}
+.pp-f:hover:not(.on){border-color:var(--purple-dim);color:var(--purple)}
+.pp-table{border:1px solid var(--line2);border-radius:var(--r);overflow:hidden}
+.pp-th{background:var(--bg);padding:8px 14px;font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--line2);display:grid}
+.pp-tr{padding:10px 14px;font-size:12px;border-bottom:1px solid var(--line2);display:grid;align-items:center;transition:background .1s}
+.pp-tr:last-child{border-bottom:none}
+.pp-tr:hover{background:var(--bg)}
+.pp-primary{font-weight:600;color:var(--navy)}
+.pp-secondary{font-size:11px;color:var(--muted);margin-top:1px}
+.pp-amount{font-weight:600;color:var(--navy);font-variant-numeric:tabular-nums}
+.pp-purple{color:var(--purple);font-weight:600}
+/* ledger specific */
+.ledger-layout{display:grid;grid-template-columns:1fr 260px;gap:0;height:100%}
+.ledger-main{padding:20px 24px;border-right:1px solid var(--line2)}
+.ledger-side{padding:20px}
+.ledger-acc{background:var(--bg);border:1px solid var(--line2);border-radius:var(--r);padding:14px;margin-bottom:12px}
+.ledger-acc-n{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.ledger-acc-row{display:flex;justify-content:space-between;font-size:11px;margin-bottom:6px}
+.ledger-acc-l{color:var(--muted)}
+.ledger-acc-v{font-weight:600;color:var(--navy)}
+.l-progress{height:4px;background:var(--bg2);border-radius:100px;margin-top:4px;overflow:hidden}
+.l-progress-fill{height:100%;border-radius:100px;background:var(--purple)}
+/* analytics */
+.analytics-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.an-card{background:var(--bg);border:1px solid var(--line2);border-radius:var(--r);padding:16px}
+.an-card-h{font-size:12px;font-weight:600;color:var(--navy);margin-bottom:14px}
+.an-bar-item{display:flex;flex-direction:column;gap:3px;margin-bottom:10px}
+.an-bar-item:last-child{margin-bottom:0}
+.an-bar-top{display:flex;justify-content:space-between;font-size:11px}
+.an-bar-track{height:7px;background:var(--bg2);border-radius:100px;overflow:hidden;margin-top:2px}
+.an-bar-fill{height:100%;border-radius:100px}
+/* whatsapp */
+.wa-layout{display:grid;grid-template-columns:200px 1fr;height:100%}
+.wa-list{border-right:1px solid var(--line2);padding:12px 0}
+.wa-list-h{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted2);padding:4px 14px 10px}
+.wa-item{display:flex;align-items:center;gap:9px;padding:9px 14px;cursor:pointer;transition:background .12s}
+.wa-item.active{background:var(--purple-pale)}
+.wa-item:hover:not(.active){background:var(--bg)}
+.wa-avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.wa-item-name{font-size:12px;font-weight:600;color:var(--navy)}
+.wa-item-msg{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wa-chat{display:flex;flex-direction:column;height:100%}
+.wa-chat-head{padding:12px 16px;border-bottom:1px solid var(--line2);display:flex;align-items:center;gap:10px}
+.wa-chat-name{font-size:13px;font-weight:600;color:var(--navy)}
+.wa-chat-sub{font-size:11px;color:var(--muted)}
+.wa-messages{flex:1;padding:16px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.wa-bubble{max-width:78%;padding:9px 13px;border-radius:12px;font-size:12px;line-height:1.5}
+.wa-bubble.in{background:var(--purple);color:#fff;align-self:flex-start;border-radius:3px 12px 12px 12px}
+.wa-bubble.out{background:var(--white);color:var(--navy);align-self:flex-end;border-radius:12px 3px 12px 12px;border:1px solid var(--line2)}
+.wa-input-row{display:flex;gap:8px;padding:12px 16px;border-top:1px solid var(--line2);background:var(--white)}
+.wa-input{flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:8px;padding:8px 12px;font-size:12px;color:var(--navy);font-family:inherit}
+.wa-send{background:var(--purple);color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:12px;font-weight:500;cursor:pointer}
+/* campaigns */
+.camp-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.camp-card{background:var(--bg);border:1px solid var(--line2);border-radius:var(--r);padding:16px}
+.camp-card-h{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:4px}
+.camp-card-sub{font-size:11px;color:var(--muted);margin-bottom:12px}
+.camp-progress-row{display:flex;justify-content:space-between;font-size:11px;margin-bottom:4px}
+.camp-track{height:5px;background:var(--bg2);border-radius:100px;overflow:hidden}
+.camp-fill{height:100%;border-radius:100px}
+/* transport */
+.transport-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-bottom:16px}
+.tc-head{font-size:10px;font-weight:600;color:var(--muted2);text-align:center;padding:4px}
+.tc-cell{border:1px solid var(--line2);border-radius:6px;padding:8px 6px;min-height:58px;background:var(--white)}
+.tc-date{font-size:10px;font-weight:600;color:var(--muted);margin-bottom:4px}
+.tc-booking{font-size:9px;font-weight:600;padding:2px 5px;border-radius:3px;margin-bottom:2px}
+.tc-booking.conf{background:rgba(22,163,74,.12);color:#16a34a}
+.tc-booking.hold{background:var(--purple-pale);color:var(--purple)}
+.tc-booking.blk{background:rgba(217,119,6,.1);color:#d97706}
+/* search bar */
+.pp-search{display:flex;gap:8px;margin-bottom:12px}
+.pp-search-input{flex:1;background:var(--bg);border:1px solid var(--line2);border-radius:8px;padding:7px 12px;font-size:12px;color:var(--navy);font-family:inherit;outline:none;transition:border-color .15s}
+.pp-search-input:focus{border-color:var(--purple-dim)}
+/* staff alerts */
+.alert-item{display:flex;align-items:flex-start;gap:12px;padding:14px 0;border-bottom:1px solid var(--line2)}
+.alert-item:last-child{border-bottom:none}
+.alert-ico{width:32px;height:32px;border-radius:9px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.alert-ico svg{width:15px;height:15px}
+.alert-h{font-size:13px;font-weight:600;color:var(--navy);margin-bottom:3px}
+.alert-sub{font-size:12px;color:var(--muted)}
+.alert-actions{display:flex;gap:7px;margin-top:8px}
+.alert-btn{padding:4px 12px;border-radius:6px;font-size:11px;font-weight:600;border:none;cursor:pointer}
+.alert-btn.resolve{background:var(--purple);color:#fff}
+.alert-btn.read{background:var(--bg);color:var(--mid);border:1px solid var(--line)}
+.priority-high{background:rgba(220,38,38,.1);color:#dc2626;display:inline-flex;padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700;margin-bottom:4px}
+
+/* â”€â”€ SETUP â”€â”€ */
+.setup{background:var(--bg);padding:72px 56px}
+.setup-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px}
+.setup-step{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px 24px;transition:all .2s ease}.setup-step:hover{border-color:var(--purple-dim);box-shadow:0 4px 24px rgba(91,61,232,.10);transform:translateY(-2px)}
+.setup-step-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px}
+.setup-step-num{font-size:42px;font-weight:800;color:var(--purple);opacity:.12;line-height:1;letter-spacing:-.04em;filter:blur(1px);user-select:none}
+.setup-step-ico{width:40px;height:40px;border-radius:10px;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.setup-step-ico svg{width:20px;height:20px;color:var(--purple)}
+.setup-step-h{font-size:15px;font-weight:600;color:var(--navy);margin-bottom:6px;font-family:'Roboto Slab','Georgia',serif}
+.setup-step-p{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* â”€â”€ CTA â”€â”€ */
+.cta-footer-wrap{background:var(--bg);padding:32px 40px 0}
+.cta{background:transparent;padding:0;text-align:center;position:relative;z-index:3}
+.cta-inner{background:linear-gradient(135deg,#5b3de8 0%,#7c5cf4 100%);border-radius:20px;padding:44px 56px 40px;position:relative;overflow:hidden;max-width:1100px;margin:0 auto;z-index:3;transition:filter .3s ease}
+.cta-inner:hover{filter:brightness(1.08)}
+.cta-inner::before{content:'';position:absolute;left:-60px;bottom:-60px;width:320px;height:320px;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 65%);pointer-events:none}
+.cta-inner::after{content:'';position:absolute;right:-40px;top:-40px;width:260px;height:260px;background:radial-gradient(circle,rgba(255,255,255,.05) 0%,transparent 65%);pointer-events:none}
+.cta-kicker{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:12px}
+.cta h2{font-size:clamp(28px,3.5vw,42px);color:#fff;margin-bottom:10px;letter-spacing:-.02em;line-height:1.1}
+.cta h2 em{font-style:normal;color:rgba(255,255,255,.7)}
+.cta p{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:28px;line-height:1.7;max-width:420px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;justify-content:center;gap:12px}
+.cta .btn-p{background:#fff;color:var(--purple);box-shadow:none}
+.cta .btn-p:hover{background:rgba(255,255,255,.9)}
+.cta .btn-o{background:transparent;color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.25)}
+.cta .btn-o:hover{border-color:rgba(255,255,255,.6);color:#fff}
+.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1100px;margin:0 auto;text-align:left}
+.mod-card{background:var(--white);border:1px solid var(--purple-dim);border-radius:var(--r-lg);padding:24px;cursor:default;position:relative;overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s}
+.mod-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--purple),var(--purple2));opacity:0;transition:opacity .2s}
+.mod-card:hover{border-color:var(--purple-dim);box-shadow:0 8px 32px rgba(91,61,232,.12);transform:translateY(-3px)}
+.mod-card:hover::before{opacity:1}
+.mod-n-badge{width:36px;height:36px;border-radius:10px;background:var(--purple-pale);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--purple);letter-spacing:.04em;margin-bottom:14px;flex-shrink:0}
+.mod-card:hover .mod-n-badge{background:var(--purple);color:#fff}
+.mod-h{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:6px;font-family:'Roboto Slab','Georgia',serif}
+.mod-p{font-size:12px;color:var(--muted);line-height:1.65}
+.mod-detail{font-size:11px;color:var(--purple);margin-top:10px;font-weight:500;opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s;display:flex;align-items:center;gap:4px}
+.mod-detail::before{content:'→';font-size:11px}
+.mod-card:hover .mod-detail{opacity:1;transform:none}
+
+/* â”€â”€ ANIMS â”€â”€ */
+
+/* ── Hero entrance ── */
+@keyframes hIn    { from{opacity:0;transform:translateY(22px)}  to{opacity:1;transform:none} }
+@keyframes hVid   { from{opacity:0;transform:translateX(28px) scale(.96)} to{opacity:1;transform:none} }
+@keyframes hEye   { from{opacity:0;transform:translateY(-8px)} to{opacity:1;transform:none} }
+.hero-eye         { animation:hEye .5s  cubic-bezier(.22,1,.36,1) .05s  both }
+.hero h1          { animation:hIn  .72s cubic-bezier(.22,1,.36,1) .16s  both }
+.hero-sub         { animation:hIn  .65s cubic-bezier(.22,1,.36,1) .28s  both; opacity:0 }
+.hero-actions     { animation:hIn  .6s  cubic-bezier(.22,1,.36,1) .40s  both; opacity:0 }
+.hero-vid-col, .hero-img-col { animation:hVid .85s cubic-bezier(.22,1,.36,1) .12s  both }
+.hero-plat        { animation:hIn  .7s  cubic-bezier(.22,1,.36,1) .50s  both; opacity:0 }
+
+/* ── Scroll reveal variants ── */
+.reveal           { opacity:0; transform:translateY(24px);  transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1) }
+.reveal-l         { opacity:0; transform:translateX(-28px); transition:opacity .65s cubic-bezier(.22,1,.36,1), transform .65s cubic-bezier(.22,1,.36,1) }
+.reveal-r         { opacity:0; transform:translateX(28px);  transition:opacity .65s cubic-bezier(.22,1,.36,1), transform .65s cubic-bezier(.22,1,.36,1) }
+.reveal-scale     { opacity:0; transform:scale(.93);        transition:opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1) }
+.reveal.in, .reveal-l.in, .reveal-r.in, .reveal-scale.in { opacity:1; transform:none }
+/* stagger children */
+.stagger-wrap>*   { opacity:0; transform:translateY(20px); transition:opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1) }
+.stagger-wrap.in>*:nth-child(1){transition-delay:.05s}
+.stagger-wrap.in>*:nth-child(2){transition-delay:.13s}
+.stagger-wrap.in>*:nth-child(3){transition-delay:.21s}
+.stagger-wrap.in>*:nth-child(4){transition-delay:.29s}
+.stagger-wrap.in>*:nth-child(5){transition-delay:.37s}
+.stagger-wrap.in>*:nth-child(6){transition-delay:.45s}
+.stagger-wrap.in>*  { opacity:1; transform:none }
+
+.stagger>*        { opacity:0; transform:translateY(18px); transition:opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1) }
+.stagger.in>*:nth-child(1){opacity:1;transform:none;transition-delay:.03s}
+.stagger.in>*:nth-child(2){opacity:1;transform:none;transition-delay:.09s}
+.stagger.in>*:nth-child(3){opacity:1;transform:none;transition-delay:.15s}
+.stagger.in>*:nth-child(4){opacity:1;transform:none;transition-delay:.21s}
+.stagger.in>*:nth-child(5){opacity:1;transform:none;transition-delay:.27s}
+.stagger.in>*:nth-child(6){opacity:1;transform:none;transition-delay:.33s}
+.stagger.in>*:nth-child(7){opacity:1;transform:none;transition-delay:.39s}
+.stagger.in>*:nth-child(8){opacity:1;transform:none;transition-delay:.45s}
+.stagger.in>*:nth-child(9){opacity:1;transform:none;transition-delay:.51s}
+
+/* ── Floating ambient orb ── */
+@keyframes orbFloat {
+  0%,100% { transform:translate(0,0) scale(1) }
+  33%      { transform:translate(18px,-14px) scale(1.06) }
+  66%      { transform:translate(-12px,10px) scale(.96) }
+}
+.hero-grad::after {
+  content:''; position:absolute;
+  width:320px; height:320px; border-radius:50%;
+  background:radial-gradient(circle, rgba(91,61,232,.13) 0%, transparent 70%);
+  left:55%; top:10%; pointer-events:none;
+  animation:orbFloat 9s ease-in-out infinite;
+}
+
+/* ── Strip pulse dot ── */
+@keyframes sdot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+.s-dot { animation:sdot 2s ease-in-out infinite }
+.s-item:nth-child(odd)  .s-dot { animation-delay:.4s }
+.s-item:nth-child(even) .s-dot { animation-delay:0s }
+
+/* ── Stat number pop on reveal ── */
+@keyframes numPop { 0%{transform:scale(.7);opacity:0} 70%{transform:scale(1.08)} 100%{transform:scale(1);opacity:1} }
+.d-stat-n.pop, .pp-stat-n.pop { animation:numPop .5s cubic-bezier(.34,1.56,.64,1) both }
+
+/* ── Card shimmer on hover ── */
+.feat-card::after, .setup-step::after {
+  content:''; position:absolute; inset:0; border-radius:inherit;
+  background:linear-gradient(120deg, transparent 30%, rgba(91,61,232,.04) 50%, transparent 70%);
+  opacity:0; transition:opacity .3s;
+}
+.feat-card:hover::after, .setup-step:hover::after { opacity:1 }
+.feat-card, .setup-step { position:relative; overflow:hidden }
+
+/* ── Section eye-stripe slide-in ── */
+.sec-eye { opacity:0; transform:translateX(-16px);
+  transition:opacity .5s ease, transform .5s cubic-bezier(.22,1,.36,1) }
+.sec-eye.in { opacity:1; transform:none }
+
+/* ── Button press ── */
+.btn-p:active  { transform:scale(.97) }
+.btn-o:active  { transform:scale(.97) }
+
+/* ── FAQ ── */
+.bas-faq-list{display:flex;flex-direction:column;gap:8px}
+.bas-faq-item{background:var(--white);border:1px solid var(--line2);border-radius:var(--r-lg);height:60px;overflow:hidden;transition:height .3s cubic-bezier(.22,.61,.36,1)}
+.bas-faq-item.bas-open{height:148px}
+.bas-faq-q{width:100%;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;font-size:13px;font-weight:600;color:var(--navy);text-align:left;transition:color .15s;font-family:inherit}
+.bas-faq-q:hover{color:var(--purple)}
+.bas-faq-item.bas-open .bas-faq-q{color:var(--purple)}
+.bas-faq-ico{width:22px;height:22px;flex-shrink:0;border-radius:50%;border:1px solid var(--line);position:relative;transition:transform .25s,background .2s,border-color .2s}
+.bas-faq-item.bas-open .bas-faq-ico{background:var(--purple);border-color:var(--purple);transform:rotate(45deg)}
+.bas-faq-ico::before,.bas-faq-ico::after{content:'';position:absolute;background:var(--muted);border-radius:2px;transition:background .18s}
+.bas-faq-ico::before{width:10px;height:1.5px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.bas-faq-ico::after{width:1.5px;height:10px;top:50%;left:50%;transform:translate(-50%,-50%)}
+.bas-faq-item.bas-open .bas-faq-ico::before,.bas-faq-item.bas-open .bas-faq-ico::after{background:#fff}
+.bas-faq-body{overflow:hidden}
+.bas-faq-a{font-size:13px;color:var(--muted);line-height:1.75;padding:0 20px 18px}
+
+/* ── SECTION TRANSITIONS ── */
+.sec-divider{height:1px;background:linear-gradient(to right,transparent,var(--purple-dim) 30%,var(--purple-dim) 70%,transparent);margin:0 56px;opacity:.5}
+section{position:relative}
+.features,.setup{position:relative}
+.features::before,.setup::before{content:'';display:block;height:40px;background:linear-gradient(to bottom,transparent,var(--bg));margin-bottom:-40px;pointer-events:none}
+.features.no-fade::before{display:none}
+
+/* â”€â”€ TEXT ACCENTS â”€â”€ */
+.tx-purple{color:var(--purple);font-style:normal}
+.tx-green{color:var(--green);font-style:normal}
+.tx-amber{color:var(--amber);font-style:normal}
+.tx-rose{color:var(--rose);font-style:normal}
+.tx-hl{background:linear-gradient(120deg,var(--purple-pale) 0%,var(--purple-pale) 100%);padding:0 4px;border-radius:3px;color:var(--purple);font-style:normal}
+
+/* â”€â”€ AUDIENCE STRIP â”€â”€ */
+.aud-strip{background:var(--white);padding:20px 56px;border-top:1px solid var(--line2)}
+.aud-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.aud-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted2);margin-right:4px}
+.aud-pill{display:inline-flex;align-items:center;gap:5px;padding:5px 13px;border-radius:100px;font-size:12px;font-weight:600;border:1.5px solid}
+.aud-pill.a1{background:var(--purple-pale);border-color:var(--purple-dim);color:var(--purple)}
+.aud-pill.a2{background:#dcfce7;border-color:#bbf7d0;color:#16a34a}
+.aud-pill.a3{background:#fef3c7;border-color:#fde68a;color:#d97706}
+.aud-pill.a4{background:#dbeafe;border-color:#bfdbfe;color:#1d4ed8}
+.aud-pill.a5{background:#fce7f3;border-color:#fbcfe8;color:#be185d}
+.aud-pill.a6{background:#f3e8ff;border-color:#e9d5ff;color:#7c3aed}
+
+/* â”€â”€ RESPONSIVE â”€â”€ */
+@media(max-width:1100px){
+  .dash-body{grid-template-columns:180px 1fr 230px}
+}
+@media(max-width:960px){
+  .d-right{display:none}
+  .dash-body{grid-template-columns:180px 1fr}
+}
+@media(max-width:860px){
+  .hero-top-row{grid-template-columns:1fr;gap:28px}
+  .hero-img-col{width:100%}
+  .hero,.features,.pages-sec,.setup,.cta{padding-left:28px;padding-right:28px;padding-top:40px;padding-bottom:40px}
+  .aud-strip{padding-left:28px;padding-right:28px}
+  .dash-body{grid-template-columns:1fr;min-height:auto}
+  .d-side,.d-right{display:none}
+  .d-stats{grid-template-columns:1fr 1fr}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .pages-layout{grid-template-columns:1fr;min-height:auto}
+  .pages-sidebar{border-right:none;border-bottom:1px solid var(--line2);display:flex;flex-wrap:wrap;gap:4px;padding:12px;background:var(--bg)}
+  .ps-tab{flex:0 0 auto;font-size:11px;padding:6px 10px}
+  .ps-grp-lbl{width:100%;padding:8px 4px 2px;font-size:9px}
+  .setup-steps{grid-template-columns:1fr 1fr}
+  .mod-grid{grid-template-columns:1fr 1fr}
+  .pp-stats{grid-template-columns:1fr 1fr}
+  .analytics-grid{grid-template-columns:1fr}
+  .ledger-layout{grid-template-columns:1fr}
+  .ledger-side{display:none}
+  .wa-layout{grid-template-columns:1fr}
+  .wa-list{display:none}
+  .camp-grid{grid-template-columns:1fr}
+  .pp-th,.pp-tr{font-size:11px}
+}
+@media(max-width:700px){
+  .feat-grid{grid-template-columns:1fr}
+  .pp-stats{grid-template-columns:1fr 1fr}
+  .pp-th,.pp-tr{grid-template-columns:1fr 80px !important;font-size:11px}
+  .pp-th span:not(:first-child):not(:last-child),.pp-tr>*:not(:first-child):not(:last-child){display:none}
+  .camp-grid{grid-template-columns:1fr}
+  .transport-cal{grid-template-columns:repeat(4,1fr)}
+}
+@media(max-width:600px){
+  .hero,.features,.pages-sec,.setup,.cta{padding-left:18px;padding-right:18px;padding-top:32px;padding-bottom:32px}
+  .aud-strip{padding-left:18px;padding-right:18px}
+  .hero h1{font-size:38px}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .d-stats,.pp-stats{grid-template-columns:1fr 1fr}
+  .d-stats .d-stat-n{font-size:18px}
+  .setup-steps{grid-template-columns:1fr}
+  .mod-grid{grid-template-columns:1fr}
+  .cta-btns{flex-direction:column;align-items:center}
+  .transport-cal{grid-template-columns:repeat(4,1fr)}
+  .tc-cell{padding:4px;min-height:44px}
+  .mini-graphic{overflow-x:auto}
+  .mini-cal{grid-template-columns:repeat(7,minmax(24px,1fr))}
+  .analytics-grid{grid-template-columns:1fr}
+  .ledger-layout{grid-template-columns:1fr}
+  .wa-layout{grid-template-columns:1fr}
+  .wa-list{display:none}
+}
+@media(max-width:480px){
+  .hero h1{font-size:30px}
+  .feat-grid{grid-template-columns:1fr}
+  .hero-actions{width:100%}
+  .hero-actions .btn-p,.hero-actions .btn-o{width:100%;justify-content:center;text-align:center}
+}
+
+/* ── ROTATING STATEMENT + TESTIMONIALS ── */
+.rot-sec{background:var(--bg);padding:72px 56px 40px;overflow:hidden}
+.rot-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px;margin:0 auto}
+.rot-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--purple);margin-bottom:20px}
+.rot-heading{font-family:'Roboto Slab','Georgia',serif;font-size:clamp(36px,4vw,54px);font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:4px}
+@keyframes phraseIn{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
+.rot-phrase-wrap{display:block;margin-bottom:32px}
+.rot-phrase{display:block;color:var(--purple);font-family:'Roboto Slab','Georgia',serif;font-size:clamp(36px,4vw,54px);font-weight:700;line-height:1.15;opacity:0}
+.rot-phrase.active{animation:phraseIn .55s cubic-bezier(.22,1,.36,1) forwards}
+.rot-stats{display:flex;gap:24px;margin-top:0}
+.rot-stats-card{display:flex;gap:24px;background:var(--white);border:1px solid var(--line2);border-radius:var(--r-lg);padding:16px 20px 16px 0;justify-content:flex-end}
+.rot-stat{border-left:2px solid var(--purple-dim);padding-left:14px}.rot-stat:first-child{border-left:none;padding-left:0}
+.rot-stat-n{font-family:'Roboto Slab','Georgia',serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1}
+.rot-stat-l{font-size:11px;color:var(--muted);margin-top:3px}
+/* wheel */
+.rot-wheel{position:relative;height:240px;overflow:hidden;display:flex;align-items:center;justify-content:flex-end}
+.rot-wheel-item{position:absolute;right:0;top:50%;font-family:'Roboto Slab','Georgia',serif;font-weight:400;color:var(--purple);text-align:right;line-height:1.3;white-space:nowrap;transition:transform .6s cubic-bezier(.22,1,.36,1),opacity .6s,font-size .6s}
+/* testimonial carousel */
+.testi-sec{background:var(--bg);padding:0 56px 32px;overflow:hidden;margin-top:0}
+.testi-divider{border:none;border-top:1px solid var(--line);margin:0 0 32px}
+.testi-track-wrap{max-width:1100px;margin:0 auto;overflow:hidden;position:relative}
+.testi-track-wrap::before,.testi-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:48px;z-index:2;pointer-events:none}
+.testi-track-wrap::before{left:0;background:linear-gradient(to right,var(--bg),transparent)}
+.testi-track-wrap::after{right:0;background:linear-gradient(to left,var(--bg),transparent)}
+.testi-track{display:flex;gap:20px;will-change:transform}
+.testi-slide{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:0 0 100%}
+.testi-card{background:var(--white);border:1px solid var(--line2);border-radius:var(--r-lg);padding:24px;display:flex;flex-direction:column;gap:12px}
+.testi-q{font-size:13px;color:var(--mid);line-height:1.7;flex:1}
+.testi-q em{font-style:normal;color:var(--purple);font-weight:500}
+.testi-author{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line2)}
+.testi-avatar{width:32px;height:32px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.testi-name{font-size:12px;font-weight:600;color:var(--navy)}
+.testi-role{font-size:11px;color:var(--muted)}
+.testi-dots{display:flex;justify-content:center;gap:6px;margin-top:20px}
+.testi-dot{width:6px;height:6px;border-radius:50%;background:var(--purple-dim);border:none;padding:0;cursor:pointer;transition:background .2s,transform .2s}
+.testi-dot.on{background:var(--purple);transform:scale(1.3)}
+@media(max-width:860px){.rot-layout{grid-template-columns:1fr;gap:32px}.rot-ghost{align-items:flex-start}.testi-slide{grid-template-columns:1fr}.rot-sec,.testi-sec{padding-left:28px;padding-right:28px}}
+@media(max-width:600px){.rot-sec{padding:48px 18px 40px}.testi-sec{padding:0 18px 56px}}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="site-nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-badge">
+        <svg viewBox="0 0 14 14" fill="none"><rect x="1.5" y="1.5" width="5" height="5" rx="1.2" fill="#fff"/><rect x="7.5" y="1.5" width="5" height="5" rx="1.2" fill="rgba(255,255,255,.6)"/><rect x="1.5" y="7.5" width="5" height="5" rx="1.2" fill="rgba(255,255,255,.6)"/><rect x="7.5" y="7.5" width="5" height="5" rx="1.2" fill="rgba(255,255,255,.4)"/></svg>
+      </div>
+      <span class="nav-logo-name">B2BStays</span>
+    </a>
+    <div class="nav-links">
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#pages" class="nav-link">Platform</a>
+      <a href="#setup" class="nav-link">How it works</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="https://www.eglobe-solutions.com/contact.html" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://www.eglobe-solutions.com/b2bstays/Hotel/Account/Login" class="nav-login">Log in</a>
+      <a href="https://www.eglobe-solutions.com/contact.html" class="nav-cta">Get a Demo</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grad"></div>
+  <div class="hero-inner">
+    <div class="hero-top-row">
+      <div class="hero-text-col">
+        <div class="hero-eye"><span class="hero-dot"></span>One Connected Platform for Hotel Operations</div>
+        <h1>Run your hotel business<br>from one place.</h1>
+        <p class="hero-h2-type">One platform to <span id="hero-type" class="tx-purple"></span><span class="hero-cursor">|</span></p>
+        <p class="hero-sub">From B2B bookings and agent commissions to corporate accounts, transport, marketing and vendor coordination, B2BStays brings your hotel operations together in one place.</p>
+        <div class="hero-actions">
+          <a href="#features" class="btn-p">Explore B2BStays <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="https://www.eglobe-solutions.com/contact.html" class="btn-o">Book a Demo</a>
+        </div>
+      </div>
+      <div class="hero-img-col" style="position:relative">
+        <video src="b2b.mp4" autoplay muted loop playsinline id="hero-vid"></video>
+        <button id="hero-mute-btn" onclick="(function(){var v=document.getElementById('hero-vid'),b=document.getElementById('hero-mute-btn');v.muted=!v.muted;b.innerHTML=v.muted?'<svg width=\'14\' height=\'14\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><path d=\'M11 5L6 9H2v6h4l5 4V5z\'/><line x1=\'23\' y1=\'9\' x2=\'17\' y2=\'15\'/><line x1=\'17\' y1=\'9\' x2=\'23\' y2=\'15\'/></svg>':'<svg width=\'14\' height=\'14\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'2\'><path d=\'M11 5L6 9H2v6h4l5 4V5z\'/><path d=\'M19.07 4.93a10 10 0 010 14.14\'/><path d=\'M15.54 8.46a5 5 0 010 7.07\'/></svg>';})();" style="position:absolute;bottom:12px;right:12px;background:rgba(255,255,255,.9);border:1px solid var(--line2);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--navy);transition:all .2s;backdrop-filter:blur(8px)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+      </div>
+    </div>
+    <!-- LIVE PLATFORM -->
+    <div class="hero-plat" id="pages">
+      <div class="hero-plat-bar">
+        <div class="d r"></div><div class="d y"></div><div class="d g"></div>
+        <div class="dash-url">b2bstays.in</div>
+      </div>
+      <div class="pages-layout" style="border-radius:0;border:none;box-shadow:none;margin-top:0;min-height:520px">
+        <div class="pages-sidebar">
+          <div class="ps-grp-lbl">Hotel Bookings</div>
+          <div class="ps-tab active" data-panel="p-agent-bookings"><svg viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5h11" stroke="currentColor" stroke-width="1.2"/></svg>Agent Bookings</div>
+          <div class="ps-tab" data-panel="p-group-quotations"><svg viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7 3l3.5 3.5L7 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Group Quotations</div>
+          <div class="ps-tab" data-panel="p-commission"><svg viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 6.5h4M6.5 4.5v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Commission Payable</div>
+          <div class="ps-tab" data-panel="p-payments"><svg viewBox="0 0 13 13" fill="none"><rect x="1" y="2.5" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 5.5h11" stroke="currentColor" stroke-width="1.2"/></svg>Payments</div>
+          <div class="ps-grp-lbl">City Ledger</div>
+          <div class="ps-tab" data-panel="p-ledger"><svg viewBox="0 0 13 13" fill="none"><path d="M2 3h9v8H2z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M2 6h9M5 6v5" stroke="currentColor" stroke-width="1.2"/></svg>Accounts &amp; Ledger</div>
+          <div class="ps-tab" data-panel="p-manage-accounts"><svg viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="4.5" r="2.5" stroke="currentColor" stroke-width="1.2"/><path d="M2 11c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Manage Accounts</div>
+          <div class="ps-tab" data-panel="p-analytics"><svg viewBox="0 0 13 13" fill="none"><path d="M2 10 5 7l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Analytics</div>
+          <div class="ps-grp-lbl">Marketing</div>
+          <div class="ps-tab" data-panel="p-whatsapp"><svg viewBox="0 0 13 13" fill="none"><path d="M6.5 1.5a5 5 0 0 1 4.5 7.2L12 11.5l-2.8-.8A5 5 0 1 1 6.5 1.5z" stroke="currentColor" stroke-width="1.2"/></svg>WhatsApp Messaging</div>
+          <div class="ps-tab" data-panel="p-campaigns"><svg viewBox="0 0 13 13" fill="none"><path d="M2 3h9v7H2z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M4 6h5M4 8h3" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Campaigns</div>
+          <div class="ps-grp-lbl">Operations</div>
+          <div class="ps-tab" data-panel="p-transport"><svg viewBox="0 0 13 13" fill="none"><circle cx="3.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><circle cx="9.5" cy="9.5" r="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 9.5h1M5 9.5h4M11 9.5h1M2 6l1.5-3h5L10 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Transport</div>
+          <div class="ps-tab" data-panel="p-alerts"><svg viewBox="0 0 13 13" fill="none"><path d="M6.5 1.5v1M3 3l.7.7M10 3l-.7.7M1.5 8h10M5 8v.5a1.5 1.5 0 0 0 3 0V8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M6.5 2.5a3.5 3.5 0 0 1 3.5 3.5v2h-7V6a3.5 3.5 0 0 1 3.5-3.5z" stroke="currentColor" stroke-width="1.2"/></svg>Staff Alerts</div>
+        </div>
+        <div class="pages-content">
+          <div class="page-panel active" id="p-agent-bookings">
+            <div class="pp-head"><div class="pp-title">Agent Bookings</div><div class="pp-actions"><button class="pp-btn pp-action-btn" data-action="export" data-done="Exported ✓">Export CSV</button><button class="pp-btn primary pp-action-btn" data-action="add" data-done="Booking Added ✓">+ New Booking</button></div></div>
+            <div class="pp-body">
+              <div class="pp-stats"><div class="pp-stat"><div class="pp-stat-n">247</div><div class="pp-stat-l">Total Bookings</div></div><div class="pp-stat"><div class="pp-stat-n">1,247</div><div class="pp-stat-l">Room Nights</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--purple)">&#8377;48.2L</div><div class="pp-stat-l">Revenue</div></div><div class="pp-stat"><div class="pp-stat-n">84</div><div class="pp-stat-l">Active Agents</div></div></div>
+              <div class="pp-search"><input class="pp-search-input" placeholder="Search by agent, ref, status&hellip;" oninput="filterTableBySearch(this)" /></div>
+              <div class="pp-filters"><div class="pp-f on">All</div><div class="pp-f">Confirmed</div><div class="pp-f">Pending</div><div class="pp-f">Commission Due</div><div class="pp-f">Checked Out</div></div>
+              <div class="pp-table">
+                <div class="pp-th" style="grid-template-columns:1.4fr 1fr .8fr .8fr 80px 90px"><span>Agent</span><span>Booking Ref</span><span>Check-in</span><span>Rooms</span><span>Commission</span><span>Status</span></div>
+                <div class="pp-tr" style="grid-template-columns:1.4fr 1fr .8fr .8fr 80px 90px"><div><div class="pp-primary">Agent A</div><div class="pp-secondary">DMC Channel</div></div><span>#BK-001</span><span>Nov 15</span><span>15 Deluxe</span><span class="pp-purple">&#8377;28,350</span><span><span class="st stc">Confirmed</span></span></div>
+
+                <div class="pp-tr" style="grid-template-columns:1.4fr 1fr .8fr .8fr 80px 90px"><div><div class="pp-primary">Agent D</div><div class="pp-secondary">OTA Partner</div></div><span>#BK-004</span><span>Nov 22</span><span>2 Deluxe</span><span style=”color:var(--muted)”>–</span><span><span class=”st stn”>New</span></span></div>
+                <div class="pp-tr" style="grid-template-columns:1.4fr 1fr .8fr .8fr 80px 90px"><div><div class="pp-primary">Agent E</div><div class="pp-secondary">Leisure Agent</div></div><span>#BK-005</span><span>Nov 28</span><span>6 Standard</span><span class="pp-purple">&#8377;7,200</span><span><span class="st stc">Confirmed</span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-group-quotations">
+            <div class="pp-head"><div class="pp-title">Group Quotations</div><div class="pp-actions"><button class="pp-btn pp-action-btn" data-action="filter" data-done="Filtered ✓">Filter</button><button class="pp-btn primary pp-action-btn" data-action="add" data-done="Quote Drafted ✓">+ New Quote</button></div></div>
+            <div class="pp-body">
+              <div class="pp-stats"><div class="pp-stat"><div class="pp-stat-n">18</div><div class="pp-stat-l">Active Quotes</div></div><div class="pp-stat"><div class="pp-stat-n">6</div><div class="pp-stat-l">Awaiting Reply</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--green)">9</div><div class="pp-stat-l">Confirmed</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--rose)">3</div><div class="pp-stat-l">Rejected</div></div></div>
+              <div class="pp-filters"><div class="pp-f on">All</div><div class="pp-f">Awaiting Reply</div><div class="pp-f">Confirmed</div><div class="pp-f">Rejected</div></div>
+              <div class="pp-table">
+                <div class="pp-th" style="grid-template-columns:1.2fr .9fr .8fr .7fr .8fr 100px"><span>Agent</span><span>Event Type</span><span>Dates</span><span>Rooms</span><span>Value</span><span>Status</span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr .9fr .8fr .7fr .8fr 100px"><div><div class="pp-primary">Corp A</div><div class="pp-secondary">MICE</div></div><span>Conference</span><span>Dec 5&#8211;8</span><span>40</span><span class="pp-purple">&#8377;4.8L</span><span><span class="st stn">Awaiting</span></span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr .9fr .8fr .7fr .8fr 100px"><div><div class="pp-primary">Agent A</div><div class="pp-secondary">Leisure</div></div><span>Group Tour</span><span>Nov 15&#8211;18</span><span>15</span><span class=”pp-purple”>&#8377;1.89L</span><span><span class="st stc">Confirmed</span></span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr .9fr .8fr .7fr .8fr 100px"><div><div class="pp-primary">Corp B</div><div class="pp-secondary">Corporate</div></div><span>Annual Meet</span><span>Dec 12&#8211;14</span><span>22</span><span class="pp-purple">&#8377;2.4L</span><span><span class="st stp">Negotiating</span></span></div>
+
+                <div class="pp-tr" style="grid-template-columns:1.2fr .9fr .8fr .7fr .8fr 100px"><div><div class="pp-primary">Corp C</div><div class="pp-secondary">Govt.</div></div><span>Training</span><span>Nov 25&#8211;27</span><span>30</span><span class="pp-purple">&#8377;2.7L</span><span><span class="st stc">Confirmed</span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-commission">
+            <div class="pp-head"><div class="pp-title">Commission Payable</div><div class="pp-actions"><button class="pp-btn pp-action-btn" data-action="export" data-done="Exported ✓">Export</button><button class="pp-btn primary pp-action-btn" data-action="confirm" data-done="Settlement Done ✓">Settle Selected</button></div></div>
+            <div class="pp-body">
+              <div class="pp-stats"><div class="pp-stat"><div class="pp-stat-n" style="color:var(--purple)">&#8377;6.8L</div><div class="pp-stat-l">Total Due</div></div><div class="pp-stat"><div class="pp-stat-n">12</div><div class="pp-stat-l">Agents Pending</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--green)">&#8377;14.2L</div><div class="pp-stat-l">Settled This Month</div></div><div class="pp-stat"><div class="pp-stat-n">84</div><div class="pp-stat-l">Bookings Tracked</div></div></div>
+              <div class="pp-table">
+                <div class="pp-th" style="grid-template-columns:.3fr 1.2fr 1fr .8fr .8fr 100px"><span></span><span>Agent</span><span>Channel</span><span>Bookings</span><span>Commission</span><span>Action</span></div>
+                <div class="pp-tr" style="grid-template-columns:.3fr 1.2fr 1fr .8fr .8fr 100px"><input type="checkbox"><div><div class="pp-primary">Agent A</div><div class="pp-secondary">DMC</div></div><span>DMC Channel</span><span>23</span><span class="pp-purple">&#8377;2.1L</span><button class="pp-btn primary" style="font-size:11px;padding:4px 10px">Pay NEFT</button></div>
+                <div class="pp-tr" style="grid-template-columns:.3fr 1.2fr 1fr .8fr .8fr 100px"><input type="checkbox"><div><div class="pp-primary">Agent B</div><div class="pp-secondary">Corporate</div></div><span>TMC Channel</span><span>18</span><span class="pp-purple">&#8377;1.6L</span><button class="pp-btn primary" style="font-size:11px;padding:4px 10px">Pay NEFT</button></div>
+                <div class="pp-tr" style="grid-template-columns:.3fr 1.2fr 1fr .8fr .8fr 100px"><input type="checkbox"><div><div class="pp-primary">Agent C</div><div class="pp-secondary">Govt.</div></div><span>Govt. Channel</span><span>12</span><span class="pp-purple">&#8377;96,000</span><button class="pp-btn primary" style="font-size:11px;padding:4px 10px">Pay NEFT</button></div>
+                <div class="pp-tr" style="grid-template-columns:.3fr 1.2fr 1fr .8fr .8fr 100px"><input type="checkbox"><div><div class="pp-primary">Agent D</div><div class="pp-secondary">OTA</div></div><span>OTA Channel</span><span>9</span><span class="pp-purple">&#8377;72,000</span><button class="pp-btn primary" style="font-size:11px;padding:4px 10px">Pay NEFT</button></div>
+                <div class="pp-tr" style="grid-template-columns:.3fr 1.2fr 1fr .8fr .8fr 100px"><input type="checkbox"><div><div class="pp-primary">Agent E</div><div class="pp-secondary">Leisure</div></div><span>Leisure</span><span>7</span><span class="pp-purple">&#8377;56,000</span><button class="pp-btn primary" style="font-size:11px;padding:4px 10px">Pay NEFT</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-payments">
+            <div class="pp-head"><div class="pp-title">Payments</div><div class="pp-actions"><button class="pp-btn primary pp-action-btn" data-action="add" data-done="Link Sent ✓">+ Generate Link</button></div></div>
+            <div class="pp-body">
+              <div class="pp-stats"><div class="pp-stat"><div class="pp-stat-n" style="color:var(--green)">&#8377;22.4L</div><div class="pp-stat-l">Total Received</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--amber)">&#8377;8.1L</div><div class="pp-stat-l">Links Awaiting</div></div><div class="pp-stat"><div class="pp-stat-n">14</div><div class="pp-stat-l">Active Links</div></div><div class="pp-stat"><div class="pp-stat-n">3</div><div class="pp-stat-l">Expired</div></div></div>
+              <div class="pp-table">
+                <div class="pp-th" style="grid-template-columns:1.2fr 1fr .8fr .8fr 100px"><span>Quotation Ref</span><span>Agent</span><span>Amount</span><span>Type</span><span>Status</span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 100px"><span class="pp-primary">#GQ-101</span><span>Corp A</span><span class="pp-purple">&#8377;2.4L</span><span>Full Payment</span><span><span class="st stc">Received</span></span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 100px"><span class="pp-primary">#GQ-102</span><span>Agent A</span><span class="pp-purple">&#8377;94,500</span><span>Advance 50%</span><span><span class="st stp">Awaiting</span></span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 100px"><span class="pp-primary">#GQ-103</span><span>Corp B</span><span class="pp-purple">&#8377;1.2L</span><span>Advance 50%</span><span><span class="st stp">Awaiting</span></span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 100px"><span class="pp-primary">#GQ-099</span><span>Agent B</span><span class="pp-purple">&#8377;66,000</span><span>Full Payment</span><span><span class="st stc">Received</span></span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 100px"><span class="pp-primary">#GQ-097</span><span>Corp C</span><span class="pp-purple">&#8377;1.35L</span><span>Full Payment</span><span><span class="st stc">Received</span></span></div>
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-ledger">
+            <div class="pp-head"><div class="pp-title">Accounts &amp; Ledger</div><div class="pp-actions"><button class="pp-btn pp-action-btn" data-action="export" data-done="Downloaded ✓">Download Statement</button><button class="pp-btn primary pp-action-btn" data-action="add" data-done="Entry Logged ✓">+ Log Entry</button></div></div>
+            <div class="pp-body" style="padding:0">
+              <div class="ledger-layout">
+                <div class="ledger-main">
+                  <div class="pp-filters" style="margin-bottom:14px;margin-top:0;padding-top:14px"><div class="pp-f on">All Accounts</div><div class="pp-f">Overdue</div><div class="pp-f">Near Limit</div></div>
+                  <div class="pp-table">
+                    <div class="pp-th" style="grid-template-columns:1.2fr .8fr .8fr .8fr 90px"><span>Account</span><span>Balance Due</span><span>Unassigned Cr.</span><span>Total Charges</span><span>Status</span></div>
+                    <div class="pp-tr" style="grid-template-columns:1.2fr .8fr .8fr .8fr 90px"><div><div class="pp-primary">Corp A</div><div class="pp-secondary">Credit: &#8377;5L</div></div><span class="pp-purple">&#8377;4.2L</span><span>&#8377;18,000</span><span>&#8377;9.6L</span><span><span class="st stp">Near Limit</span></span></div>
+                    <div class="pp-tr" style="grid-template-columns:1.2fr .8fr .8fr .8fr 90px"><div><div class="pp-primary">Corp B</div><div class="pp-secondary">Credit: &#8377;3L</div></div><span class="pp-purple">&#8377;2.9L</span><span>&#8377;0</span><span>&#8377;6.8L</span><span><span class="st stp">Near Limit</span></span></div>
+                    <div class="pp-tr" style="grid-template-columns:1.2fr .8fr .8fr .8fr 90px"><div><div class="pp-primary">Corp C</div><div class="pp-secondary">Credit: &#8377;2L</div></div><span class="pp-purple">&#8377;1.6L</span><span>&#8377;24,000</span><span>&#8377;4.2L</span><span><span class="st stc">Healthy</span></span></div>
+                    <div class="pp-tr" style="grid-template-columns:1.2fr .8fr .8fr .8fr 90px"><div><div class="pp-primary">Agent A</div><div class="pp-secondary">Credit: &#8377;1L</div></div><span class="pp-purple">&#8377;88,000</span><span>&#8377;0</span><span>&#8377;2.4L</span><span><span class="st stc">Healthy</span></span></div>
+                  </div>
+                </div>
+                <div class="ledger-side">
+                  <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:12px">Corp A: Detail</div>
+                  <div class="ledger-acc"><div class="ledger-acc-n">Corp A</div><div class="ledger-acc-row"><span class="ledger-acc-l">Credit Limit</span><span class="ledger-acc-v">&#8377;5,00,000</span></div><div class="ledger-acc-row"><span class="ledger-acc-l">Balance Due</span><span class="ledger-acc-v" style="color:var(--amber)">&#8377;4,20,000</span></div><div class="ledger-acc-row"><span class="ledger-acc-l">Utilisation</span><span class="ledger-acc-v">84%</span></div><div class="l-progress"><div class="l-progress-fill" style="width:84%;background:var(--amber)"></div></div></div>
+                  <div class="ledger-acc"><div class="ledger-acc-n">Corp B</div><div class="ledger-acc-row"><span class="ledger-acc-l">Credit Limit</span><span class="ledger-acc-v">&#8377;3,00,000</span></div><div class="ledger-acc-row"><span class="ledger-acc-l">Balance Due</span><span class="ledger-acc-v" style="color:var(--amber)">&#8377;2,90,000</span></div><div class="ledger-acc-row"><span class="ledger-acc-l">Utilisation</span><span class="ledger-acc-v">97%</span></div><div class="l-progress"><div class="l-progress-fill" style="width:97%;background:var(--rose)"></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-manage-accounts">
+            <div class="pp-head"><div class="pp-title">Manage Accounts</div><div class="pp-actions"><button class="pp-btn primary pp-action-btn" data-action="add" data-done="Account Created ✓">+ New Account</button></div></div>
+            <div class="pp-body">
+              <div class="pp-table">
+                <div class="pp-th" style="grid-template-columns:1.2fr 1fr .8fr .8fr 80px 80px"><span>Account Name</span><span>Contact</span><span>Type</span><span>Credit Limit</span><span>Status</span><span>Action</span></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 80px 80px"><div><div class="pp-primary">Corp A</div></div><span>accounts@corp-a.com</span><span>Corporate</span><span>&#8377;5,00,000</span><span><span class="st stc">Active</span></span><button class="pp-btn" style="font-size:11px;padding:4px 10px">Edit</button></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 80px 80px"><div><div class="pp-primary">Corp B</div></div><span>finance@corp-b.com</span><span>Corporate</span><span>&#8377;3,00,000</span><span><span class="st stc">Active</span></span><button class="pp-btn" style="font-size:11px;padding:4px 10px">Edit</button></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 80px 80px"><div><div class="pp-primary">Corp C</div></div><span>bookings@corp-c.com</span><span>Corporate</span><span>&#8377;2,00,000</span><span><span class="st stc">Active</span></span><button class="pp-btn" style="font-size:11px;padding:4px 10px">Edit</button></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 80px 80px"><div><div class="pp-primary">Agent A</div></div><span>ops@agent-a.com</span><span>Travel Agent</span><span>&#8377;1,00,000</span><span><span class="st stc">Active</span></span><button class="pp-btn" style="font-size:11px;padding:4px 10px">Edit</button></div>
+                <div class="pp-tr" style="grid-template-columns:1.2fr 1fr .8fr .8fr 80px 80px"><div><div class="pp-primary">Govt. Org A</div></div><span>travel@gov-a.in</span><span>Govt. Agent</span><span>&#8377;2,50,000</span><span><span class="st stp">Inactive</span></span><button class="pp-btn" style="font-size:11px;padding:4px 10px">Edit</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-analytics">
+            <div class="pp-head"><div class="pp-title">City Ledger Analytics</div><div class="pp-actions"><button class="pp-btn pp-action-btn" data-action="export" data-done="Exported ✓">Export</button></div></div>
+            <div class="pp-body">
+              <div class="pp-stats"><div class="pp-stat"><div class="pp-stat-n">&#8377;31.4L</div><div class="pp-stat-l">All-time Charges</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--green)">&#8377;22.6L</div><div class="pp-stat-l">Total Payments</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--amber)">&#8377;8.8L</div><div class="pp-stat-l">Balance Due</div></div><div class="pp-stat"><div class="pp-stat-n">9</div><div class="pp-stat-l">Active Accounts</div></div></div>
+              <div class="analytics-grid">
+                <div class="an-card"><div class="an-card-h">Outstanding by Account</div><div class="an-bar-item"><div class="an-bar-top"><span style="color:var(--muted)">Corp A</span><span style="font-weight:600;color:var(--navy)">&#8377;4.2L · 48%</span></div><div class="an-bar-track"><div class="an-bar-fill" style="width:84%;background:var(--amber)"></div></div></div><div class="an-bar-item"><div class="an-bar-top"><span style="color:var(--muted)">Corp B</span><span style="font-weight:600;color:var(--navy)">&#8377;2.9L · 33%</span></div><div class="an-bar-track"><div class="an-bar-fill" style="width:58%;background:var(--purple)"></div></div></div><div class="an-bar-item"><div class="an-bar-top"><span style="color:var(--muted)">Corp C</span><span style="font-weight:600;color:var(--navy)">&#8377;1.6L · 18%</span></div><div class="an-bar-track"><div class="an-bar-fill" style="width:32%;background:var(--purple)"></div></div></div><div class="an-bar-item"><div class="an-bar-top"><span style="color:var(--muted)">Agent A</span><span style="font-weight:600;color:var(--navy)">&#8377;88K · 10%</span></div><div class="an-bar-track"><div class="an-bar-fill" style="width:18%;background:var(--purple)"></div></div></div></div>
+                <div class="an-card"><div class="an-card-h">Charges vs Payments</div><div class="an-bar-item"><div class="an-bar-top"><span style="color:var(--muted)">Total Charges</span><span style="font-weight:600;color:var(--navy)">&#8377;31.4L</span></div><div class="an-bar-track"><div class="an-bar-fill" style="width:100%;background:var(--navy)"></div></div></div><div class="an-bar-item"><div class="an-bar-top"><span style="color:var(--muted)">Payments Received</span><span style="font-weight:600;color:var(--green)">&#8377;22.6L</span></div><div class="an-bar-track"><div class="an-bar-fill" style="width:72%;background:var(--green)"></div></div></div><div class="an-bar-item"><div class="an-bar-top"><span style="color:var(--muted)">Balance Due</span><span style="font-weight:600;color:var(--amber)">&#8377;8.8L</span></div><div class="an-bar-track"><div class="an-bar-fill" style="width:28%;background:var(--amber)"></div></div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-whatsapp">
+            <div class="pp-head"><div class="pp-title">WhatsApp Messaging</div><div class="pp-actions"><button class="pp-btn primary pp-action-btn" data-action="add" data-done="Message Queued ✓">+ New Message</button></div></div>
+            <div class="pp-body" style="padding:0">
+              <div class="wa-layout">
+                <div class="wa-list"><div class="wa-list-h">Conversations</div><div class="wa-item active"><div class="wa-avatar" style="background:var(--purple)">A</div><div><div class="wa-item-name">Agent A</div><div class="wa-item-msg">Confirmed, thank you!</div></div></div><div class="wa-item"><div class="wa-avatar" style="background:#16a34a">B</div><div><div class="wa-item-name">Corp B</div><div class="wa-item-msg">Need 10 rooms for...</div></div></div><div class="wa-item"><div class="wa-avatar" style="background:#d97706">C</div><div><div class="wa-item-name">Agent C</div><div class="wa-item-msg">Rate sheet request</div></div></div><div class="wa-item"><div class="wa-avatar" style="background:#be185d">D</div><div><div class="wa-item-name">Corp D</div><div class="wa-item-msg">Invoice pending</div></div></div></div>
+                <div class="wa-chat">
+                  <div class="wa-chat-head"><div class="wa-avatar" style="background:var(--purple);width:32px;height:32px;font-size:13px;font-weight:700;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center">A</div><div><div class="wa-chat-name">Agent A</div><div class="wa-chat-sub">DMC Channel · Last seen recently</div></div></div>
+                  <div class="wa-messages"><div class="wa-bubble in">Hi, need 15 rooms from Nov 15&#8211;18 for our group. Can you confirm rates?</div><div class="wa-bubble out">Confirmed! 15 Deluxe rooms at contracted rate. Booking #BK-001 created.</div><div class="wa-bubble in">Perfect, thank you! Commission as per contract?</div><div class="wa-bubble out">Yes, 10% commission. &#8377;28,350 logged and settlement by end of month.</div><div class="wa-bubble in">Confirmed, thank you!</div></div>
+                  <div class="wa-input-row"><input class="wa-input" placeholder="Type a message&hellip;" /><button class="wa-send">Send</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-campaigns">
+            <div class="pp-head"><div class="pp-title">Campaigns</div><div class="pp-actions"><button class="pp-btn primary pp-action-btn" data-action="add" data-done="Campaign Created ✓">+ New Campaign</button></div></div>
+            <div class="pp-body">
+              <div class="pp-stats"><div class="pp-stat"><div class="pp-stat-n">8</div><div class="pp-stat-l">Active Campaigns</div></div><div class="pp-stat"><div class="pp-stat-n">1,240</div><div class="pp-stat-l">Messages Sent</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--rose)">34</div><div class="pp-stat-l">Failed</div></div><div class="pp-stat"><div class="pp-stat-n">18</div><div class="pp-stat-l">Skipped</div></div></div>
+              <div class="camp-grid"><div class="camp-card"><div class="camp-card-h">Rate Offer: Nov</div><div class="camp-card-sub">WhatsApp · 240 recipients</div><div class="camp-progress-row"><span style="color:var(--muted);font-size:11px">Delivered</span><span style="font-weight:600;font-size:11px;color:var(--green)">228 / 240</span></div><div class="camp-track"><div class="camp-fill" style="width:95%;background:var(--green)"></div></div></div><div class="camp-card"><div class="camp-card-h">Festive Packages</div><div class="camp-card-sub">Email · 180 recipients</div><div class="camp-progress-row"><span style="color:var(--muted);font-size:11px">In Progress</span><span style="font-weight:600;font-size:11px;color:var(--purple)">110 / 180</span></div><div class="camp-track"><div class="camp-fill" style="width:61%;background:var(--purple)"></div></div></div><div class="camp-card"><div class="camp-card-h">MICE: Dec Offer</div><div class="camp-card-sub">WhatsApp · 60 recipients</div><div class="camp-progress-row"><span style="color:var(--muted);font-size:11px">Sent</span><span style="font-weight:600;font-size:11px;color:var(--green)">58 / 60</span></div><div class="camp-track"><div class="camp-fill" style="width:97%;background:var(--green)"></div></div></div><div class="camp-card"><div class="camp-card-h">Corporate Reminder</div><div class="camp-card-sub">Email · 90 recipients</div><div class="camp-progress-row"><span style="color:var(--muted);font-size:11px">Scheduled</span><span style="font-weight:600;font-size:11px;color:var(--amber)">0 / 90</span></div><div class="camp-track"><div class="camp-fill" style="width:0%;background:var(--amber)"></div></div></div></div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-transport">
+            <div class="pp-head"><div class="pp-title">Transport: Cab Bookings</div><div class="pp-actions"><button class="pp-btn pp-action-btn" data-action="filter" data-done="Fleet Active ✓">Fleet View</button><button class="pp-btn primary pp-action-btn" data-action="add" data-done="Trip Booked ✓">+ New Booking</button></div></div>
+            <div class="pp-body">
+              <div class="pp-stats"><div class="pp-stat"><div class="pp-stat-n">9</div><div class="pp-stat-l">Total Vehicles</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--green)">6</div><div class="pp-stat-l">Active Today</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--amber)">2</div><div class="pp-stat-l">Pending Assign</div></div><div class="pp-stat"><div class="pp-stat-n">3</div><div class="pp-stat-l">Trips Completed</div></div></div>
+              <div style="margin-bottom:12px;font-size:11px;font-weight:700;color:var(--muted2);text-transform:uppercase;letter-spacing:.07em">Fleet Calendar · Nov 2025</div>
+              <div class="transport-cal"><div class="tc-head">Mon</div><div class="tc-head">Tue</div><div class="tc-head">Wed</div><div class="tc-head">Thu</div><div class="tc-head">Fri</div><div class="tc-head">Sat</div><div class="tc-head">Sun</div><div class="tc-cell"><div class="tc-date">10</div><div class="tc-booking conf">SUV-01</div><div class="tc-booking conf">Sedan-03</div></div><div class="tc-cell"><div class="tc-date">11</div><div class="tc-booking conf">SUV-01</div><div class="tc-booking hold">Tempo-01</div></div><div class="tc-cell"><div class="tc-date">12</div><div class="tc-booking blk">Sedan-02 ⚙</div></div><div class="tc-cell"><div class="tc-date">13</div><div class="tc-booking conf">SUV-02</div><div class="tc-booking conf">Sedan-03</div></div><div class="tc-cell"><div class="tc-date">14</div><div class="tc-booking conf">SUV-01</div><div class="tc-booking hold">SUV-02</div></div><div class="tc-cell"><div class="tc-date">15</div><div class="tc-booking conf">Tempo-01</div></div><div class="tc-cell"><div class="tc-date">16</div></div></div>
+              <div class="pp-table">
+                <div class="pp-th" style="grid-template-columns:1fr .8fr .8fr .8fr 90px"><span>Trip</span><span>Vehicle</span><span>Type</span><span>Driver</span><span>Status</span></div>
+                <div class="pp-tr" style="grid-template-columns:1fr .8fr .8fr .8fr 90px"><div><div class="pp-primary">Airport Pickup</div><div class="pp-secondary">Nov 13 · 06:30</div></div><span>SUV-01</span><span>Airport Drop</span><span>Driver 1</span><span><span class="st stc">In Progress</span></span></div>
+
+                <div class="pp-tr" style="grid-template-columns:1fr .8fr .8fr .8fr 90px"><div><div class="pp-primary">Group Transfer</div><div class="pp-secondary">Nov 15 · 14:00</div></div><span>Tempo-01</span><span>Multi-day</span><span style=”color:var(--muted)”>–</span><span><span class=”st stp”>Assign Vehicle</span></span></div>
+
+              </div>
+            </div>
+          </div>
+          <div class="page-panel" id="p-alerts">
+            <div class="pp-head"><div class="pp-title">Staff Alerts</div><div class="pp-actions"><button class="pp-btn pp-action-btn" data-action="confirm" data-done="All Read ✓">Mark All Read</button></div></div>
+            <div class="pp-body">
+              <div class="pp-stats"><div class="pp-stat"><div class="pp-stat-n" style="color:var(--rose)">4</div><div class="pp-stat-l">High Priority</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--amber)">3</div><div class="pp-stat-l">Medium</div></div><div class="pp-stat"><div class="pp-stat-n" style="color:var(--green)">12</div><div class="pp-stat-l">Resolved Today</div></div><div class="pp-stat"><div class="pp-stat-n">19</div><div class="pp-stat-l">Total Active</div></div></div>
+              <div>
+                <div class="alert-item"><div class="alert-ico" style="background:rgba(220,38,38,.1)"><svg viewBox="0 0 15 15" fill="none"><path d="M7.5 2v5M7.5 10v.5" stroke="#dc2626" stroke-width="1.5" stroke-linecap="round"/><circle cx="7.5" cy="7.5" r="6.5" stroke="#dc2626" stroke-width="1.3"/></svg></div><div><div class="priority-high">HIGH</div><div class="alert-h">Driver licence expiring, Driver 3</div><div class="alert-sub">Fitness certificate expires in 4 days. Vehicle SUV-02 may be grounded.</div><div class="alert-actions"><button class="alert-btn resolve">Resolve</button><button class="alert-btn read">Mark Read</button></div></div></div>
+                <div class="alert-item" style="border-bottom:none"><div class="alert-ico" style="background:rgba(217,119,6,.09)"><svg viewBox="0 0 15 15" fill="none"><path d="M7.5 1.5 1 13h13L7.5 1.5z" stroke="#d97706" stroke-width="1.3" stroke-linejoin="round"/><path d="M7.5 6v3M7.5 10.5v.5" stroke="#d97706" stroke-width="1.3" stroke-linecap="round"/></svg></div><div><div style="display:inline-flex;padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700;background:rgba(217,119,6,.09);color:#d97706;margin-bottom:4px">MEDIUM</div><div class="alert-h">Group quotation #GQ-101 awaiting reply, 48h</div><div class="alert-sub">Corp A has not responded to the quote sent 2 days ago. Follow up recommended.</div><div class="alert-actions"><button class="alert-btn resolve">Resolve</button><button class="alert-btn read">Mark Read</button></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /pages-content -->
+      </div><!-- /pages-layout -->
+    </div><!-- /hero-plat -->
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+<!-- SCROLL STRIP -->
+<div class="strip">
+  <div class="strip-track">
+    <div class="s-item"><span class="s-dot"></span>Agent Bookings</div>
+    <div class="s-item"><span class="s-dot"></span>Group Quotations</div>
+    <div class="s-item"><span class="s-dot"></span>Commission Payable</div>
+    <div class="s-item"><span class="s-dot"></span>City Ledger</div>
+    <div class="s-item"><span class="s-dot"></span>Hotel Packages</div>
+    <div class="s-item"><span class="s-dot"></span>Fleet Calendar</div>
+    <div class="s-item"><span class="s-dot"></span>WhatsApp Campaigns</div>
+    <div class="s-item"><span class="s-dot"></span>Vendor Approvals</div>
+    <div class="s-item"><span class="s-dot"></span>Staff Alerts</div>
+    <div class="s-item"><span class="s-dot"></span>Reputation</div>
+    <div class="s-item"><span class="s-dot"></span>Agent Bookings</div>
+    <div class="s-item"><span class="s-dot"></span>Group Quotations</div>
+    <div class="s-item"><span class="s-dot"></span>Commission Payable</div>
+    <div class="s-item"><span class="s-dot"></span>City Ledger</div>
+    <div class="s-item"><span class="s-dot"></span>Hotel Packages</div>
+    <div class="s-item"><span class="s-dot"></span>Fleet Calendar</div>
+    <div class="s-item"><span class="s-dot"></span>WhatsApp Campaigns</div>
+    <div class="s-item"><span class="s-dot"></span>Vendor Approvals</div>
+    <div class="s-item"><span class="s-dot"></span>Staff Alerts</div>
+    <div class="s-item"><span class="s-dot"></span>Reputation</div>
+  </div>
+</div>
+
+<div class="sec-divider"></div>
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="sec-in">
+    <div class="reveal">
+      <div class="sec-eye">How it works</div>
+      <h2 class="sec-h">Every module your <span class="tx-purple">hotel ops team</span> actually uses.</h2>
+    </div>
+    <div class="feat-grid stagger-wrap" id="feat-grid">
+      <!-- 1 -->
+      <div class="feat-card fc-1">
+        <div class="feat-num">01</div>
+        <h3 class="feat-h">Bookings <span class="tx-purple">&amp;</span> Commissions</h3>
+        <p class="feat-desc">Manage agent bookings, group quotes, and <span class="tx-purple">commission payouts</span> without a single email chain.</p>
+        <div class="mini-graphic">
+          <div class="mini-row"><span class="mini-label">Agent A · #BK-001</span><span class="mini-badge bg">Confirmed</span></div>
+          <div class="mini-row"><span class="mini-label">Agent B · #BK-002</span><span class="mini-badge ba">Pending</span></div>
+          <div class="mini-row"><span class="mini-label">Agent C · #BK-003</span><span class="mini-badge bp">New</span></div>
+          <div class="mini-row"><span class="mini-label">Commission Due</span><span class="mini-val" style="color:var(--purple)">&#8377;6.8L</span></div>
+        </div>
+      </div>
+      <!-- 2 -->
+      <div class="feat-card fc-2">
+        <div class="feat-num">02</div>
+        <h3 class="feat-h"><span class="tx-green">City Ledger</span></h3>
+        <p class="feat-desc">Real-time <span class="tx-green">balance due</span> per corporate or agent account. Filter, download statements, post charges in seconds.</p>
+        <div class="mini-graphic">
+          <div class="mini-bar-row">
+            <div class="mini-bar-item"><div class="mini-bar-top"><span class="mini-bar-label">Corp A</span><span class="mini-bar-val">&#8377;4.2L</span></div><div class="mini-bar-track"><div class="mini-bar-fill" style="width:84%"></div></div></div>
+            <div class="mini-bar-item"><div class="mini-bar-top"><span class="mini-bar-label">Corp B</span><span class="mini-bar-val">&#8377;2.9L</span></div><div class="mini-bar-track"><div class="mini-bar-fill" style="width:58%"></div></div></div>
+            <div class="mini-bar-item"><div class="mini-bar-top"><span class="mini-bar-label">Corp C</span><span class="mini-bar-val">&#8377;1.6L</span></div><div class="mini-bar-track"><div class="mini-bar-fill" style="width:32%"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- 3 -->
+      <div class="feat-card fc-3">
+        <div class="feat-num">03</div>
+        <h3 class="feat-h">Hotel <span class="tx-amber">Packages</span></h3>
+        <p class="feat-desc">List multi-day stays with itinerary and <span class="tx-amber">per-pax pricing</span>. Agents book or negotiate; you track every commission.</p>
+        <div class="mini-graphic">
+          <div class="mini-stat-row">
+            <div class="mini-stat"><div class="mini-stat-n">12</div><div class="mini-stat-l">Active packages</div></div>
+            <div class="mini-stat"><div class="mini-stat-n">&#8377;18L</div><div class="mini-stat-l">Package revenue</div></div>
+          </div>
+          <div style="margin-top:10px"><div class="mini-tag-row"><div class="mini-tag">2N/3D</div><div class="mini-tag">Group</div><div class="mini-tag">MICE</div></div></div>
+        </div>
+      </div>
+      <!-- 4 -->
+      <div class="feat-card fc-4">
+        <div class="feat-num">04</div>
+        <h3 class="feat-h"><span class="tx-rose">Transportation</span></h3>
+        <p class="feat-desc">Hour-by-hour <span class="tx-rose">fleet calendar</span> with trip status, vehicle assignment, driver records, and supplier rate cards.</p>
+        <div class="mini-graphic">
+          <div class="mini-cal">
+            <div class="mini-cal-cell booked">1</div><div class="mini-cal-cell booked">2</div><div class="mini-cal-cell partial">3</div><div class="mini-cal-cell">4</div><div class="mini-cal-cell booked">5</div><div class="mini-cal-cell">6</div><div class="mini-cal-cell partial">7</div>
+            <div class="mini-cal-cell">8</div><div class="mini-cal-cell booked">9</div><div class="mini-cal-cell booked">10</div><div class="mini-cal-cell partial">11</div><div class="mini-cal-cell">12</div><div class="mini-cal-cell booked">13</div><div class="mini-cal-cell">14</div>
+          </div>
+          <div class="mini-row" style="padding-top:8px"><span class="mini-label">Vehicles active</span><span class="mini-val">6 / 9</span></div>
+        </div>
+      </div>
+      <!-- 5 -->
+      <div class="feat-card fc-5">
+        <div class="feat-num">05</div>
+        <h3 class="feat-h"><span class="tx-purple">Marketing</span></h3>
+        <p class="feat-desc">Send bulk <span class="tx-purple">WhatsApp and email campaigns</span> from your hotel's own number with full delivery tracking.</p>
+        <div class="mini-graphic">
+          <div class="mini-row"><span class="mini-label">Campaign: Rate Offer</span><span class="mini-badge bg">Sent 240</span></div>
+          <div class="mini-row"><span class="mini-label">Campaign: Festive</span><span class="mini-badge ba">In Progress</span></div>
+          <div class="mini-row"><span class="mini-label">Template: Confirmation</span><span class="mini-badge bp">Active</span></div>
+        </div>
+      </div>
+      <!-- 6 -->
+      <div class="feat-card fc-6">
+        <div class="feat-num">06</div>
+        <h3 class="feat-h">Vendors <span class="tx-green">&amp;</span> Staff Alerts</h3>
+        <p class="feat-desc">Requests route to vendors and <span class="tx-green">escalate automatically</span> on timeout. Staff see prioritised alerts for anything that needs action.</p>
+        <div class="mini-graphic">
+          <div class="mini-row"><span class="mini-label">Vendor A: Pickup request</span><span class="mini-badge bg">Approved</span></div>
+          <div class="mini-row"><span class="mini-label">Vendor B: Timed out</span><span class="mini-badge" style="background:rgba(220,38,38,.1);color:#dc2626">Escalated</span></div>
+          <div class="mini-row"><span class="mini-label">Driver licence: Expiring</span><span class="mini-badge ba">High</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sec-divider"></div>
+
+<!-- HOW IT WORKS -->
+<section class="setup" id="setup">
+  <div class="sec-in">
+    <div class="reveal">
+      <div class="sec-eye">How it works</div>
+      <h2 class="sec-h">Up and running in <em style="color:var(--purple);font-style:normal">four steps</em></h2>
+    </div>
+    <div class="setup-steps stagger-wrap" style="margin-top:32px">
+      <div class="setup-step">
+        <div class="setup-step-head"><div class="setup-step-ico"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="5" stroke="currentColor" stroke-width="1.6"/><path d="M8 14h12M8 9.5h12M8 18.5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div><div class="setup-step-num">1</div></div>
+        <div class="setup-step-h">Book a walkthrough</div>
+        <p class="setup-step-p">A 30-minute live session tailored to your property type. No slides. You see the real platform handling your workflows.</p>
+      </div>
+      <div class="setup-step">
+        <div class="setup-step-head"><div class="setup-step-ico"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.6"/><path d="M9 14l3.5 3.5L19 10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="setup-step-num">2</div></div>
+        <div class="setup-step-h">We configure your account</div>
+        <p class="setup-step-p">Your agents, rate plans, commission tiers and vendor contacts are set up with you, not handed off as a manual to follow alone.</p>
+      </div>
+      <div class="setup-step">
+        <div class="setup-step-head"><div class="setup-step-ico"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 8h18M5 14h12M5 20h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="21" cy="20" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M19.5 20h3M21 18.5v3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div><div class="setup-step-num">3</div></div>
+        <div class="setup-step-h">Your team goes live</div>
+        <p class="setup-step-p">Most properties handle real bookings within the first week. Your front desk, accounts and transport teams each get a focused view.</p>
+      </div>
+      <div class="setup-step">
+        <div class="setup-step-head"><div class="setup-step-ico"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 3v5M14 20v5M3 14h5M20 14h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="1.6"/><circle cx="14" cy="14" r="2" fill="currentColor"/></svg></div><div class="setup-step-num">4</div></div>
+        <div class="setup-step-h">Track, grow, repeat</div>
+        <p class="setup-step-p">Analytics surface which agents, routes and campaigns drive the most revenue. Commission reconciliation and ledger close themselves.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="features no-fade" id="faq" style="padding-top:0">
+  <div class="sec-in">
+    <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+      <div>
+        <div class="sec-eye">Common questions</div>
+        <h2 class="sec-h" style="margin-bottom:16px">Everything you want to know<br>before the demo.</h2>
+        <p style="font-size:14px;color:var(--muted);line-height:1.75">Most questions get answered in the first 10 minutes of a walkthrough. Here are the ones we hear most often.</p>
+        <a href="https://www.eglobe-solutions.com/contact.html" class="btn-p" style="margin-top:28px;display:inline-flex">See a Live Walkthrough <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="bas-faq-list">
+        <div class="bas-faq-item bas-open">
+          <button class="bas-faq-q" aria-expanded="true"><span>Is this built specifically for hotels, or is it a generic CRM?</span><span class="bas-faq-ico"></span></button>
+          <div class="bas-faq-body"><div class="bas-faq-a">B2BStays is built entirely around hotel B2B workflows: agent bookings, city ledger, commission payable, fleet, vendor coordination and WhatsApp campaigns. It is not a generic CRM adapted for hospitality. Every module reflects how hotel operations actually work.</div></div>
+        </div>
+        <div class="bas-faq-item">
+          <button class="bas-faq-q" aria-expanded="false"><span>We already use a PMS. Does B2BStays replace it or sit alongside it?</span><span class="bas-faq-ico"></span></button>
+          <div class="bas-faq-body"><div class="bas-faq-a">B2BStays handles the B2B layer (agent relationships, commissions, fleet and vendors) that most PMSs were never designed for. It sits alongside your PMS and fills the gaps.</div></div>
+        </div>
+        <div class="bas-faq-item">
+          <button class="bas-faq-q" aria-expanded="false"><span>How long does setup take?</span><span class="bas-faq-ico"></span></button>
+          <div class="bas-faq-body"><div class="bas-faq-a">Most properties are handling real bookings within the first week. Setup is done with you, not handed off as a manual. The demo walkthrough covers your specific workflow so there are no surprises when you go live.</div></div>
+        </div>
+        <div class="bas-faq-item">
+          <button class="bas-faq-q" aria-expanded="false"><span>Is our hotel's data secure?</span><span class="bas-faq-ico"></span></button>
+          <div class="bas-faq-body"><div class="bas-faq-a">Yes. Your data is encrypted in transit and at rest, stored on dedicated infrastructure, and never shared with third parties. Each hotel account is fully isolated. Access is role-based, so front desk, accounts and management each see only what they need.</div></div>
+        </div>
+        <div class="bas-faq-item">
+          <button class="bas-faq-q" aria-expanded="false"><span>What does the free demo actually show?</span><span class="bas-faq-ico"></span></button>
+          <div class="bas-faq-body"><div class="bas-faq-a">A 30-minute live walkthrough of the modules relevant to your operation. No slides, no generic pitch. You see the real platform with scenarios drawn from your own workflow. No commitment required.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROTATING STATEMENT + TESTIMONIALS -->
+<section class="rot-sec">
+  <div class="rot-layout">
+    <!-- LEFT: rotating headline + stats -->
+    <div class="reveal-l">
+      <div class="rot-label">Your hotel at its best</div>
+      <div class="rot-heading">This month, your hotel</div>
+      <span class="rot-phrase-wrap"><span class="rot-phrase active" id="rot-active"></span></span>
+    </div>
+    <!-- RIGHT: wheel + stats -->
+    <div class="reveal-r" style="display:flex;flex-direction:column;gap:0">
+      <div class="rot-wheel" id="rot-wheel" aria-hidden="true"></div>
+      <div class="rot-stats-card">
+        <div class="rot-stat"><div class="rot-stat-n">50+</div><div class="rot-stat-l">hotels onboarded</div></div>
+        <div class="rot-stat"><div class="rot-stat-n">&#8377;2Cr+</div><div class="rot-stat-l">commissions tracked</div></div>
+        <div class="rot-stat"><div class="rot-stat-n">10k+</div><div class="rot-stat-l">bookings managed</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testi-sec">
+  <hr class="testi-divider">
+  <div class="testi-track-wrap reveal">
+    <div class="testi-track" id="testi-track">
+      <!-- slide 1 -->
+      <div class="testi-slide">
+        <div class="testi-card">
+          <p class="testi-q">&ldquo;Before B2BStays our accounts team spent half the week <em>reconciling agent payments manually</em>. Now it takes under an hour.&rdquo;</p>
+          <div class="testi-author">
+            <div class="testi-avatar">R</div>
+            <div><div class="testi-name">Rajeev Menon</div><div class="testi-role">GM, Harbour View Hotel &middot; Kochi</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p class="testi-q">&ldquo;Our travel agents now get payment links instantly. <em>No calls, no follow-ups.</em> The city ledger alone was worth switching for.&rdquo;</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#16a34a">P</div>
+            <div><div class="testi-name">Priya Suresh</div><div class="testi-role">Revenue Manager, The Sterling Residency</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- slide 2 -->
+      <div class="testi-slide">
+        <div class="testi-card">
+          <p class="testi-q">&ldquo;WhatsApp campaigns used to mean someone <em>copy-pasting for two hours</em>. Now we schedule 200 sends in five minutes.&rdquo;</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#d97706">A</div>
+            <div><div class="testi-name">Anand Pillai</div><div class="testi-role">Sales Head, Calicut Grand Hotel</div></div>
+          </div>
+        </div>
+        <div class="testi-card">
+          <p class="testi-q">&ldquo;Fleet coordination was a <em>constant headache across shifts</em>. B2BStays gives every driver and dispatcher the same live view.&rdquo;</p>
+          <div class="testi-author">
+            <div class="testi-avatar" style="background:#0891b2">S</div>
+            <div><div class="testi-name">Sreejith Nair</div><div class="testi-role">Operations Manager, Palmview Resorts</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-dots" id="testi-dots">
+      <button class="testi-dot on" data-i="0"></button>
+      <button class="testi-dot" data-i="1"></button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA + FOOTER WRAPPER -->
+<div class="cta-footer-wrap">
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner reveal">
+    <span class="cta-kicker">No credit card required</span>
+    <h2>Less admin.<br><em>More control.</em></h2>
+    <p>Get your hotel's B2B operations running on B2BStays. Most teams are fully set up within a day.</p>
+    <div class="cta-btns">
+      <a href="https://www.eglobe-solutions.com/contact.html" class="btn-p">Start for Free <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://www.eglobe-solutions.com/contact.html" class="btn-o">Schedule a Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="footer-top stagger-wrap">
+      <div>
+        <div class="footer-brand-row">
+          <div class="footer-badge">
+            <svg viewBox="0 0 14 14" fill="none"><rect x="1.5" y="1.5" width="5" height="5" rx="1.2" fill="#fff"/><rect x="7.5" y="1.5" width="5" height="5" rx="1.2" fill="rgba(255,255,255,.6)"/><rect x="1.5" y="7.5" width="5" height="5" rx="1.2" fill="rgba(255,255,255,.6)"/><rect x="7.5" y="7.5" width="5" height="5" rx="1.2" fill="rgba(255,255,255,.4)"/></svg>
+          </div>
+          <span class="footer-name">B2BStays</span>
+        </div>
+        <p class="footer-tagline">The B2B operations layer for independent hotels. Built for the teams that keep things running.</p>
+        <p class="footer-tagline" style="margin-top:10px;color:var(--muted2);font-size:12px;">By <a href="https://www.eglobe-solutions.com/" style="color:var(--purple);text-decoration:none">eGlobe Solutions</a></p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-h">Product</div>
+        <a href="#features">All Features</a>
+        <a href="#pages">Live Demo</a>
+        <a href="#setup">How It Works</a>
+        <a href="#faq">Common Questions</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-h">Company</div>
+        <a href="https://www.eglobe-solutions.com/about.html">About eGlobe</a>
+        <a href="https://www.eglobe-solutions.com/contact.html">Get in Touch</a>
+        <a href="https://www.eglobe-solutions.com/contact.html">Request a Demo</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-h">Your Account</div>
+        <a href="https://www.eglobe-solutions.com/b2bstays/Hotel/Account/Login">Sign In</a>
+        <a href="https://www.eglobe-solutions.com/contact.html">Start Free Trial</a>
+        <a href="https://www.eglobe-solutions.com/contact.html">Get Help</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 B2BStays by eGlobe Solutions. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="https://www.eglobe-solutions.com/privacy.html">Privacy Policy</a>
+        <a href="https://www.eglobe-solutions.com/terms.html">Terms of Use</a>
+        <a href="https://www.eglobe-solutions.com/">eGlobe Solutions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end .cta-footer-wrap -->
+
+<script>
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   B2B STAYS — INTERACTIVE JS
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+
+// â”€â”€ RIPPLE on all primary buttons â”€â”€
+document.head.insertAdjacentHTML('beforeend',`<style>
+@keyframes rp{to{transform:scale(1);opacity:0}}
+@keyframes countUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.tooltip{position:fixed;background:var(--navy);color:#fff;font-size:11px;font-weight:500;padding:5px 10px;border-radius:7px;pointer-events:none;z-index:9999;white-space:nowrap;opacity:0;transition:opacity .15s;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.tooltip.show{opacity:1}
+.modal-overlay{position:fixed;inset:0;background:rgba(24,19,74,.45);z-index:8000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s;backdrop-filter:blur(3px)}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal{background:#fff;border-radius:var(--r-xl);padding:32px;width:min(480px,94vw);box-shadow:0 24px 64px rgba(91,61,232,.18);transform:translateY(16px);transition:transform .2s}
+.modal-overlay.open .modal{transform:none}
+.modal-h{font-family:'Roboto Slab','Georgia',serif;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:20px}
+.modal-row{margin-bottom:14px}
+.modal-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:5px}
+.modal-input{width:100%;background:var(--bg);border:1px solid var(--line2);border-radius:8px;padding:9px 13px;font-size:13px;color:var(--navy);font-family:inherit;outline:none;transition:border-color .15s}
+.modal-input:focus{border-color:var(--purple-dim)}
+.modal-select{width:100%;background:var(--bg);border:1px solid var(--line2);border-radius:8px;padding:9px 13px;font-size:13px;color:var(--navy);font-family:inherit;outline:none;appearance:none;cursor:pointer}
+.modal-footer{display:flex;gap:10px;justify-content:flex-end;margin-top:22px;padding-top:18px;border-top:1px solid var(--line2)}
+.pulse-ring{animation:pulseRing 1.4s ease-out infinite}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(91,61,232,.3)}70%{box-shadow:0 0 0 8px rgba(91,61,232,0)}100%{box-shadow:0 0 0 0 rgba(91,61,232,0)}}
+.row-flash{animation:rowFlash .5s ease}
+@keyframes rowFlash{0%{background:var(--purple-pale)}100%{background:transparent}}
+.bar-anim{transition:width .8s cubic-bezier(.22,1,.36,1)}
+.feat-card{cursor:default;transition:box-shadow .2s,transform .2s}
+.feat-card:hover{box-shadow:0 8px 32px rgba(91,61,232,.10);transform:translateY(-2px)}
+.mini-bar-fill,.an-bar-fill,.l-progress-fill,.camp-fill{width:0!important}
+.mini-cal-cell{cursor:pointer;transition:all .15s}
+.mini-cal-cell:hover:not(.booked):not(.partial){background:var(--purple-pale);color:var(--purple)}
+.d-tr,.pp-tr{cursor:pointer}
+.d-stat{cursor:pointer;transition:all .15s}
+.d-stat:hover{border-color:var(--purple-dim);background:var(--purple-pale)}
+.d-qa{transition:all .15s}
+.tc-cell{cursor:pointer;transition:background .12s}
+.tc-cell:hover{background:var(--bg2)}
+.wa-item{transition:background .12s}
+.ledger-acc{cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.ledger-acc:hover{border-color:var(--purple-dim);box-shadow:0 2px 12px rgba(91,61,232,.08)}
+.an-bar-track{cursor:pointer}
+.pp-stat{cursor:default;transition:all .15s}
+.pp-stat:hover{border-color:var(--purple-dim);background:var(--bg)}
+.alert-item{transition:opacity .3s,background .15s}
+.alert-item:hover{background:var(--bg)}
+
+/* ── GLOBAL HOVER POLISH ── */
+/* nav logo */
+.nav-logo{transition:opacity .15s}.nav-logo:hover{opacity:.75}
+/* testi cards */
+.testi-card{transition:border-color .2s,box-shadow .2s,transform .2s}
+.testi-card:hover{border-color:var(--purple-dim);box-shadow:0 4px 20px rgba(91,61,232,.09);transform:translateY(-2px)}
+/* stat items in card */
+.rot-stat{transition:opacity .2s}.rot-stat:hover{opacity:.75}
+/* faq item hover (closed state) */
+.bas-faq-item:not(.bas-open):hover{border-color:var(--purple-dim);box-shadow:0 2px 12px rgba(91,61,232,.07)}
+/* stats card */
+.rot-stats-card{transition:box-shadow .2s,border-color .2s}
+.rot-stats-card:hover{border-color:var(--purple-dim);box-shadow:0 4px 16px rgba(91,61,232,.08)}
+/* feat card icon */
+.feat-ico{transition:transform .25s cubic-bezier(.22,1,.36,1),background .2s}
+.feat-card:hover .feat-ico{transform:scale(1.12);background:var(--purple-pale)}
+/* setup step icon */
+.setup-step:hover .setup-step-ico{background:var(--purple-pale);border-color:var(--purple-dim)}
+.setup-step-ico{transition:background .2s,border-color .2s}
+/* section eye label */
+.sec-eye{transition:letter-spacing .2s}.sec-eye:hover{letter-spacing:.14em}
+/* footer col links */
+.footer-col a{position:relative;padding-left:0;transition:color .15s,padding-left .15s}
+.footer-col a:hover{padding-left:4px}
+/* ps-tab active indicator pulse */
+.ps-tab.active{position:relative}
+/* hero video col subtle scale on load */
+.hero-img-col{transition:box-shadow .3s}
+.hero-img-col:hover{box-shadow:0 8px 40px rgba(91,61,232,.14)}
+/* mute button */
+#hero-mute-btn:hover{background:#fff;border-color:var(--purple-dim);color:var(--purple);transform:scale(1.1)}
+/* cta inner glow pulse on hover already via brightness — add border highlight */
+.cta-inner{border:1px solid transparent;transition:filter .3s,border-color .3s}
+.cta-inner:hover{border-color:rgba(255,255,255,.18)}
+</style>`);
+
+function addRipple(btn){
+  btn.addEventListener('pointerdown',function(e){
+    const r=document.createElement('span'),rect=this.getBoundingClientRect(),sz=Math.max(rect.width,rect.height)*2;
+    r.style.cssText=`position:absolute;width:${sz}px;height:${sz}px;left:${e.clientX-rect.left-sz/2}px;top:${e.clientY-rect.top-sz/2}px;background:rgba(255,255,255,.22);border-radius:50%;transform:scale(0);animation:rp .5s ease-out forwards;pointer-events:none`;
+    this.appendChild(r);setTimeout(()=>r.remove(),600);
+  });
+}
+document.querySelectorAll('.btn-p,.pp-btn.primary,.wa-send,.alert-btn.resolve').forEach(addRipple);
+
+// â”€â”€ TOOLTIP engine â”€â”€
+const tip=document.createElement('div');tip.className='tooltip';document.body.appendChild(tip);
+function showTip(el,text){
+  tip.textContent=text;tip.classList.add('show');
+  const moveTip=e=>{tip.style.left=e.clientX+14+'px';tip.style.top=e.clientY-28+'px'};
+  el.addEventListener('mousemove',moveTip);
+  el.addEventListener('mouseleave',()=>{tip.classList.remove('show');el.removeEventListener('mousemove',moveTip)},{once:true});
+}
+
+// â”€â”€ MODAL factory â”€â”€
+function createModal(html,onSubmit){
+  let ov=document.querySelector('.modal-overlay');
+  if(!ov){ov=document.createElement('div');ov.className='modal-overlay';document.body.appendChild(ov);}
+  ov.innerHTML=`<div class="modal">${html}<div class="modal-footer"><button class="pp-btn" id="m-cancel">Cancel</button><button class="pp-btn primary" id="m-submit">Save</button></div></div>`;
+  ov.classList.add('open');
+  ov.querySelector('#m-cancel').onclick=()=>ov.classList.remove('open');
+  ov.onclick=e=>{if(e.target===ov)ov.classList.remove('open')};
+  ov.querySelector('#m-submit').onclick=()=>{onSubmit(ov);ov.classList.remove('open')};
+}
+
+// â”€â”€ SCROLL REVEAL â”€â”€
+const io=new IntersectionObserver(e=>e.forEach(x=>{
+  if(x.isIntersecting){
+    x.target.classList.add('in');
+    io.unobserve(x.target);
+    // animate bars inside revealed elements
+    x.target.querySelectorAll('.mini-bar-fill,.an-bar-fill,.l-progress-fill,.camp-fill').forEach(b=>{
+      const w=b.getAttribute('data-w')||b.style.width;
+      if(w&&w!=='0%'){b.setAttribute('data-w',w);b.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{b.style.width=w;b.style.transition='width .9s cubic-bezier(.22,1,.36,1)';}));}
+    });
+    // count-up on stat numbers inside revealed sections
+    x.target.querySelectorAll('.d-stat-n,.pp-stat-n').forEach(el=>{
+      const orig=el.textContent.trim();
+      el.classList.add('pop');
+      el.addEventListener('animationend',()=>el.classList.remove('pop'),{once:true});
+      countUp(el,orig);
+    });
+  }
+}),{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+// pre-save widths before CSS zeroes them
+document.querySelectorAll('.mini-bar-fill,.an-bar-fill,.l-progress-fill,.camp-fill').forEach(b=>{
+  const w=b.style.width;if(w&&w!=='0%')b.setAttribute('data-w',w);
+});
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-scale,.stagger,.stagger-wrap,.sec-eye').forEach(el=>io.observe(el));
+// Fallback: reveal anything still hidden after 1.2s (e.g. already in viewport on load)
+setTimeout(()=>{document.querySelectorAll('.reveal:not(.in),.reveal-l:not(.in),.reveal-r:not(.in),.reveal-scale:not(.in),.stagger:not(.in),.stagger-wrap:not(.in),.sec-eye:not(.in)').forEach(el=>el.classList.add('in'));},1200);
+
+// â”€â”€ HERO PARALLAX â”€â”€
+(function(){
+  const grad=document.querySelector('.hero-grad');
+  if(!grad)return;
+  document.addEventListener('mousemove',e=>{
+    const x=(e.clientX/window.innerWidth-.5)*18;
+    const y=(e.clientY/window.innerHeight-.5)*10;
+    grad.style.transform=`translate(${x}px,${y}px)`;
+  });
+})();
+
+// â”€â”€ NUMBER COUNT-UP â”€â”€
+function countUp(el,target,prefix='',suffix=''){
+  const raw=parseFloat(target.replace(/[^\d.]/g,''));
+  if(isNaN(raw))return;
+  const dur=900,step=16,steps=Math.round(dur/step);
+  let i=0;
+  const iv=setInterval(()=>{
+    i++;
+    const v=Math.round(raw*(i/steps)*10)/10;
+    el.textContent=prefix+(Number.isInteger(v)?v:v.toFixed(1))+suffix;
+    if(i>=steps){el.textContent=target;clearInterval(iv);}
+  },step);
+}
+
+// â”€â”€ PAGE TABS â”€â”€
+document.querySelectorAll('.ps-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    document.querySelectorAll('.ps-tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.page-panel').forEach(p=>p.classList.remove('active'));
+    tab.classList.add('active');
+    const panel=document.getElementById(tab.dataset.panel);
+    if(panel){
+      panel.classList.add('active');
+      // animate bars inside newly active panel
+      panel.querySelectorAll('.mini-bar-fill,.an-bar-fill,.l-progress-fill,.camp-fill').forEach(b=>{
+        const w=b.getAttribute('data-w')||b.style.width;
+        if(w&&w!=='0%'){b.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{b.style.width=w;b.style.transition='width .8s cubic-bezier(.22,1,.36,1)';}));}
+      });
+    }
+  });
+});
+
+// â”€â”€ FILTER PILLS (live row filter) â”€â”€
+document.querySelectorAll('.pp-filters').forEach(row=>{
+  row.querySelectorAll('.pp-f').forEach(f=>{
+    f.addEventListener('click',()=>{
+      row.querySelectorAll('.pp-f').forEach(x=>x.classList.remove('on'));
+      f.classList.add('on');
+      const kw=f.textContent.trim().toLowerCase();
+      const table=row.closest('.pp-body')?.querySelector('.pp-table');
+      if(!table)return;
+      table.querySelectorAll('.pp-tr').forEach(tr=>{
+        tr.style.display=(kw==='all'||tr.textContent.toLowerCase().includes(kw))?'':'none';
+      });
+    });
+  });
+});
+
+// â”€â”€ LIVE SEARCH â”€â”€
+function filterTableBySearch(input){
+  const q=input.value.toLowerCase();
+  input.closest('.pp-body')?.querySelectorAll('.pp-tr').forEach(tr=>{
+    tr.style.display=(!q||tr.textContent.toLowerCase().includes(q))?'':'none';
+  });
+}
+
+// â”€â”€ TABLE SORT â”€â”€
+document.querySelectorAll('.pp-th').forEach(th=>{
+  th.querySelectorAll('span').forEach((span,ci)=>{
+    if(!span.textContent.trim())return;
+    span.style.cursor='pointer';span.title='Sort';
+    let asc=true;
+    span.addEventListener('click',()=>{
+      const table=th.closest('.pp-table');
+      const rows=[...table.querySelectorAll('.pp-tr')].filter(r=>r.style.display!=='none');
+      const hidden=[...table.querySelectorAll('.pp-tr')].filter(r=>r.style.display==='none');
+      rows.sort((a,b)=>{
+        const av=[...a.children][ci]?.textContent.trim()||'';
+        const bv=[...b.children][ci]?.textContent.trim()||'';
+        const n=s=>parseFloat(s.replace(/[^\d.]/g,''));
+        return !isNaN(n(av))&&!isNaN(n(bv))?(asc?n(av)-n(bv):n(bv)-n(av)):(asc?av.localeCompare(bv):bv.localeCompare(av));
+      });
+      asc=!asc;
+      rows.forEach(r=>table.appendChild(r));
+      hidden.forEach(r=>table.appendChild(r));
+      th.querySelectorAll('span').forEach(s=>s.textContent=s.textContent.replace(/ [▲▼]/,''));
+      span.textContent=span.textContent+(asc?' ▼':' ▲');
+    });
+  });
+});
+
+// â”€â”€ ROW CLICK DRILLDOWN (booking rows show detail toast) â”€â”€
+function flashRow(tr){tr.classList.add('row-flash');setTimeout(()=>tr.classList.remove('row-flash'),500);}
+document.querySelectorAll('#p-agent-bookings .pp-tr').forEach(tr=>{
+  tr.addEventListener('click',function(){
+    flashRow(this);
+    const agent=this.querySelector('.pp-primary')?.textContent||'';
+    const ref=this.children[1]?.textContent||'';
+    const status=this.querySelector('.st')?.textContent||'';
+    showToast(`${agent} · ${ref} · ${status}`);
+  });
+});
+
+// â”€â”€ TOAST â”€â”€
+function showToast(msg,color='var(--purple)'){
+  let t=document.getElementById('b2b-toast');
+  if(!t){t=document.createElement('div');t.id='b2b-toast';t.style.cssText='position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 22px;border-radius:100px;font-size:13px;font-weight:500;z-index:9999;box-shadow:0 6px 24px rgba(0,0,0,.18);transition:opacity .3s,transform .3s;pointer-events:none';document.body.appendChild(t);}
+  t.textContent=msg;t.style.borderLeft=`3px solid ${color}`;
+  t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';
+  clearTimeout(t._tm);t._tm=setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(8px)'},2400);
+}
+
+// â”€â”€ HERO DASHBOARD SIDEBAR clicks navigate panels â”€â”€
+const dashNavMap={
+  'Agent Bookings':'p-agent-bookings','Group Quotations':'p-group-quotations',
+  'Commissions':'p-commission','Payments':'p-payments',
+  'City Ledger':'p-ledger','Transport':'p-transport','Marketing':'p-whatsapp'
+};
+document.querySelectorAll('.d-item').forEach(item=>{
+  const label=item.textContent.trim();
+  item.addEventListener('click',()=>{
+    document.querySelectorAll('.d-item').forEach(i=>i.classList.remove('on'));
+    item.classList.add('on');
+    const pid=dashNavMap[label];
+    if(pid){
+      const sec=document.getElementById('pages');
+      if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
+      setTimeout(()=>{
+        document.querySelectorAll('.ps-tab').forEach(t=>{if(t.dataset.panel===pid){t.click();}});
+      },400);
+      showToast(`Opening ${label}…`);
+    }
+  });
+});
+
+// â”€â”€ HERO STATS count-up on page load â”€â”€
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.querySelectorAll('.d-stat').forEach(s=>{
+      const n=s.querySelector('.d-stat-n');
+      if(n)countUp(n,n.textContent,'','');
+    });
+  },600);
+});
+
+// â”€â”€ HERO QUICK ACTIONS â”€â”€
+document.querySelectorAll('.d-qa').forEach(qa=>{
+  qa.addEventListener('click',function(){
+    const label=this.textContent.trim();
+    const map={'Settle Commission':'p-commission','Generate Statement':'p-ledger','Create Group Quote':'p-group-quotations','Send Payment Link':'p-payments','Assign Vehicle':'p-transport'};
+    const pid=map[label];
+    if(pid){
+      document.getElementById('pages')?.scrollIntoView({behavior:'smooth',block:'start'});
+      setTimeout(()=>document.querySelectorAll('.ps-tab').forEach(t=>{if(t.dataset.panel===pid)t.click();}),400);
+    }
+    showToast(`${label} →`);
+  });
+});
+
+// â”€â”€ COMMISSION: Pay NEFT + bulk select â”€â”€
+function updateCommissionStats(){
+  const paid=document.querySelectorAll('#p-commission .pp-btn[disabled]').length;
+  const pending=document.querySelector('#p-commission .pp-stat:nth-child(2) .pp-stat-n');
+  if(pending)pending.textContent=Math.max(0,12-paid);
+  const heroDue=document.querySelector('.d-stat:nth-child(3) .d-stat-n');
+  if(heroDue&&paid>0){heroDue.textContent='Clearing…';heroDue.style.color='var(--green)';}
+}
+document.querySelectorAll('#p-commission .pp-btn.primary').forEach(btn=>{
+  if(btn.textContent.trim()==='Pay NEFT'){
+    btn.addEventListener('click',function(){
+      const tr=this.closest('.pp-tr');
+      const amtEl=tr?.querySelector('.pp-purple');
+      if(amtEl){amtEl.style.color='var(--green)';amtEl.style.textDecoration='line-through';}
+      this.textContent='✓ Paid';this.style.background='#16a34a';this.style.borderColor='#16a34a';this.disabled=true;
+      flashRow(tr);showToast('Commission settled via NEFT','var(--green)');
+      updateCommissionStats();
+    });
+  }
+});
+// bulk settle
+const settleAll=document.querySelector('#p-commission .pp-head .pp-btn.primary');
+if(settleAll&&settleAll.textContent.includes('Settle')){
+  settleAll.addEventListener('click',()=>{
+    const checked=[...document.querySelectorAll('#p-commission input[type=checkbox]:checked')];
+    if(!checked.length){showToast('Select at least one agent first','var(--amber)');return;}
+    checked.forEach(cb=>{
+      const btn=cb.closest('.pp-tr')?.querySelector('.pp-btn.primary');
+      if(btn&&!btn.disabled)btn.click();
+    });
+  });
+}
+
+// â”€â”€ GROUP QUOTATIONS: click status to change â”€â”€
+document.querySelectorAll('#p-group-quotations .pp-tr').forEach(tr=>{
+  const stEl=tr.querySelector('.st');
+  if(!stEl)return;
+  tr.addEventListener('click',function(){
+    flashRow(this);
+    const agent=this.querySelector('.pp-primary')?.textContent||'';
+    const value=this.querySelector('.pp-purple')?.textContent||'';
+    createModal(`
+      <div class="modal-h">Update Quote: ${agent}</div>
+      <div class="modal-row"><div class="modal-label">Value</div><input class="modal-input" value="${value}" id="m-val"></div>
+      <div class="modal-row"><div class="modal-label">Status</div><select class="modal-select" id="m-status">
+        <option value="Awaiting">Awaiting</option><option value="Confirmed">Confirmed</option>
+        <option value="Negotiating">Negotiating</option><option value="Rejected">Rejected</option>
+      </select></div>
+      <div class="modal-row"><div class="modal-label">Note</div><input class="modal-input" placeholder="Optional note…" id="m-note"></div>
+    `,ov=>{
+      const sel=ov.querySelector('#m-status').value;
+      stEl.textContent=sel;
+      stEl.className='st '+(sel==='Confirmed'?'stc':sel==='Rejected'?'stn':'stp');
+      flashRow(tr);showToast(`Quote updated: ${sel}`,'var(--green)');
+    });
+  });
+});
+
+
+
+// â”€â”€ LEDGER rows: click to show detail in sidebar â”€â”€
+document.querySelectorAll('#p-ledger .pp-tr').forEach(tr=>{
+  tr.addEventListener('click',function(){
+    flashRow(this);
+    const name=this.querySelector('.pp-primary')?.textContent||'';
+    const bal=this.querySelector('.pp-purple')?.textContent||'';
+    const limit=this.querySelector('.pp-secondary')?.textContent||'';
+    const side=document.querySelector('.ledger-side');
+    if(!side)return;
+    side.querySelector('div').textContent=`${name}: Detail`;
+    const accCard=side.querySelector('.ledger-acc');
+    if(accCard){
+      accCard.querySelector('.ledger-acc-n').textContent=name;
+      const rows=accCard.querySelectorAll('.ledger-acc-row');
+      if(rows[0])rows[0].querySelector('.ledger-acc-v').textContent=limit;
+      if(rows[1])rows[1].querySelector('.ledger-acc-v').textContent=bal;
+      const pct=Math.round(parseFloat(bal.replace(/[^\d.]/g,''))/parseFloat(limit.replace(/[^\d.]/g,''))*100)||50;
+      if(rows[2])rows[2].querySelector('.ledger-acc-v').textContent=pct+'%';
+      const fill=accCard.querySelector('.l-progress-fill');
+      if(fill){fill.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{fill.style.width=pct+'%';fill.style.background=pct>90?'var(--rose)':pct>75?'var(--amber)':'var(--green)';}));}
+    }
+    showToast(`${name} ledger loaded`);
+  });
+});
+
+// â”€â”€ ANALYTICS bars: hover tooltip â”€â”€
+document.querySelectorAll('.an-bar-item').forEach(item=>{
+  item.addEventListener('mouseenter',()=>{
+    const label=item.querySelector('.an-bar-top span')?.textContent||'';
+    const val=item.querySelectorAll('.an-bar-top span')[1]?.textContent||'';
+    showTip(item,`${label}: ${val}`);
+  });
+});
+
+// â”€â”€ WHATSAPP: conversation switch + send â”€â”€
+const waConvs={
+  'Agent A':{color:'var(--purple)',sub:'DMC Channel · Online',msgs:[
+    {t:'in',m:'Hi, need 15 rooms from Nov 15 for our group. Can you confirm rates?'},
+    {t:'out',m:'Confirmed! 15 Deluxe rooms at contracted rate. Booking #BK-001 created.'},
+    {t:'in',m:'Perfect, thank you! Commission as per contract?'},
+    {t:'out',m:'Yes, 10% commission. â‚¹28,350 logged and settlement by end of month.'},
+    {t:'in',m:'Confirmed, thank you!'},
+  ]},
+  'Corp B':{color:'#16a34a',sub:'Corporate Account · Last seen 2h ago',msgs:[
+    {t:'in',m:'We need 10 rooms for our annual meet Dec 12–14.'},
+    {t:'out',m:'Sure! Sending a group quotation shortly. Preferred room type?'},
+    {t:'in',m:'Deluxe rooms, all non-smoking please.'},
+  ]},
+  'Agent C':{color:'#d97706',sub:'Leisure Agent · Last seen 1h ago',msgs:[
+    {t:'in',m:'Can you send the updated rate sheet for December?'},
+    {t:'out',m:'Attaching the December B2B rate card now.'},
+  ]},
+  'Corp D':{color:'#be185d',sub:'Corporate Account · Last seen today',msgs:[
+    {t:'in',m:'Invoice #INV-2024-088 is still pending.'},
+    {t:'out',m:'Checking with accounts. Will revert in 30 minutes.'},
+  ]},
+};
+function loadWaConv(name){
+  const data=waConvs[name];if(!data)return;
+  const msgs=document.querySelector('.wa-messages');
+  const head=document.querySelector('.wa-chat-head');
+  if(!msgs||!head)return;
+  msgs.innerHTML='';
+  data.msgs.forEach(m=>{const b=document.createElement('div');b.className=`wa-bubble ${m.t}`;b.textContent=m.m;msgs.appendChild(b);});
+  msgs.scrollTop=msgs.scrollHeight;
+  const av=head.querySelector('.wa-avatar');
+  if(av){av.textContent=name[0];av.style.background=data.color;}
+  head.querySelector('.wa-chat-name').textContent=name;
+  head.querySelector('.wa-chat-sub').textContent=data.sub;
+}
+document.querySelectorAll('.wa-item').forEach(item=>{
+  item.addEventListener('click',function(){
+    document.querySelectorAll('.wa-item').forEach(i=>i.classList.remove('active'));
+    this.classList.add('active');
+    loadWaConv(this.querySelector('.wa-item-name')?.textContent||'');
+  });
+});
+const waInput=document.querySelector('.wa-input');
+const waSend=document.querySelector('.wa-send');
+if(waInput&&waSend){
+  function sendWaMsg(){
+    const txt=waInput.value.trim();if(!txt)return;
+    const msgs=document.querySelector('.wa-messages');
+    const b=document.createElement('div');b.className='wa-bubble out';b.textContent=txt;
+    msgs.appendChild(b);msgs.scrollTop=msgs.scrollHeight;waInput.value='';
+    // flash send button
+    const orig=waSend.textContent;
+    waSend.textContent='Sent!';waSend.style.background='#16a34a';waSend.disabled=true;
+    setTimeout(()=>{waSend.textContent=orig;waSend.style.background='';waSend.disabled=false;},1800);
+    // auto-reply after 1s
+    setTimeout(()=>{
+      const replies=['Got it, thanks!','Understood. Will confirm shortly.','Thanks for the update!','Noted.'];
+      const r=document.createElement('div');r.className='wa-bubble in';r.textContent=replies[Math.floor(Math.random()*replies.length)];
+      msgs.appendChild(r);msgs.scrollTop=msgs.scrollHeight;
+    },1000+Math.random()*800);
+  }
+  waSend.addEventListener('click',sendWaMsg);
+  waInput.addEventListener('keydown',e=>{if(e.key==='Enter')sendWaMsg();});
+}
+
+// â”€â”€ CAMPAIGNS: live progress â”€â”€
+document.querySelectorAll('.camp-card').forEach(card=>{
+  card.style.cursor='pointer';
+  card.addEventListener('click',function(){
+    const fill=this.querySelector('.camp-fill');
+    const row=this.querySelector('.camp-progress-row span:last-child');
+    const sub=this.querySelector('.camp-card-sub');
+    const cur=parseInt(fill?.style.width)||0;
+    if(cur>=100){showToast('Campaign fully delivered','var(--green)');return;}
+    const inc=Math.min(cur+Math.floor(Math.random()*18)+5,100);
+    if(fill){fill.style.width=inc+'%';}
+    // update delivered count from sub label
+    const match=sub?.textContent.match(/(\d+) recipients/);
+    if(match&&row){
+      const total=parseInt(match[1]);
+      row.textContent=`${Math.round(total*inc/100)} / ${total}`;
+      row.style.color=inc>=95?'var(--green)':'var(--purple)';
+    }
+    showToast(`Campaign updated: ${inc}% delivered`);
+    this.querySelector('.camp-progress-row span:first-child').textContent=inc>=100?'Complete':'Sending…';
+  });
+  showTip(card,'Click to simulate delivery progress');
+});
+
+// â”€â”€ TRANSPORT: cell click + assign vehicle modal â”€â”€
+document.querySelectorAll('.tc-cell').forEach(cell=>{
+  const date=cell.querySelector('.tc-date')?.textContent;
+  if(!date)return;
+  const bookings=[...cell.querySelectorAll('.tc-booking')].map(b=>b.textContent);
+  cell.addEventListener('click',()=>{
+    if(bookings.length){
+      showToast(`Nov ${date}: ${bookings.join(', ')}`,'var(--purple)');
+    } else {
+      createModal(`
+        <div class=”modal-h”>Block Vehicle: Nov ${date}</div>
+        <div class="modal-row"><div class="modal-label">Vehicle</div><select class="modal-select" id="m-veh"><option>SUV-01</option><option>SUV-02</option><option>Sedan-02</option><option>Sedan-03</option><option>Tempo-01</option></select></div>
+        <div class="modal-row"><div class="modal-label">Reason</div><select class="modal-select" id="m-reason"><option>Maintenance</option><option>Internal Use</option><option>Reserved</option></select></div>
+      `,ov=>{
+        const veh=ov.querySelector('#m-veh').value;
+        const reason=ov.querySelector('#m-reason').value;
+        const b=document.createElement('div');b.className='tc-booking blk';b.textContent=`${veh} ⚙`;
+        cell.appendChild(b);
+        showToast(`${veh} blocked on Nov ${date}: ${reason}`,'var(--amber)');
+      });
+    }
+  });
+  showTip(cell,bookings.length?`Nov ${date}: ${bookings.join(' · ')}`:(`Nov ${date}: Click to block`));
+});
+
+// â”€â”€ TRANSPORT: assign vehicle to pending rows â”€â”€
+document.querySelectorAll('#p-transport .pp-tr').forEach(tr=>{
+  tr.addEventListener('click',function(){
+    const status=this.querySelector('.st')?.textContent||'';
+    if(status.includes('Assign')){
+      createModal(`
+        <div class="modal-h">Assign Vehicle</div>
+        <div class="modal-row"><div class="modal-label">Trip</div><input class="modal-input" value="${this.querySelector('.pp-primary')?.textContent||''}" readonly></div>
+        <div class="modal-row"><div class="modal-label">Vehicle</div><select class="modal-select" id="m-av"><option>SUV-01</option><option>SUV-02</option><option>Sedan-03</option><option>Tempo-01</option></select></div>
+        <div class="modal-row"><div class="modal-label">Driver</div><select class="modal-select" id="m-ad"><option>Driver 1</option><option>Driver 2</option><option>Driver 3</option></select></div>
+      `,ov=>{
+        const veh=ov.querySelector('#m-av').value;
+        const drv=ov.querySelector('#m-ad').value;
+        this.children[1].textContent=veh;
+        this.children[3].textContent=drv;
+        const stEl=this.querySelector('.st');
+        if(stEl){stEl.textContent='Confirmed';stEl.className='st stc';}
+        flashRow(this);showToast(`${veh} assigned with ${drv}`,'var(--green)');
+      });
+    } else {
+      flashRow(this);
+      showToast(`${this.querySelector('.pp-primary')?.textContent||'Trip'}: ${status}`);
+    }
+  });
+});
+
+// â”€â”€ MANAGE ACCOUNTS: Edit button (inline flash, no modal) â”€â”€
+document.querySelectorAll('#p-manage-accounts .pp-tr').forEach(tr=>{
+  tr.querySelector('.pp-btn')?.addEventListener('click',function(e){
+    e.stopPropagation();
+    const name=tr.querySelector('.pp-primary')?.textContent||'Account';
+    this.textContent='Edited ✓';this.style.background='rgba(22,163,74,.1)';this.style.color='#16a34a';this.style.borderColor='rgba(22,163,74,.3)';this.disabled=true;
+    flashRow(tr);showToast(`${name} updated`,'var(--green)');
+    setTimeout(()=>{this.textContent='Edit';this.style.background='';this.style.color='';this.style.borderColor='';this.disabled=false;},2200);
+  });
+});
+
+// â”€â”€ ALERTS: resolve/read/snooze â”€â”€
+function updateAlertStats(){
+  const resolved=document.querySelectorAll('#p-alerts .alert-item.resolved').length;
+  const el=document.querySelector('#p-alerts .pp-stat:nth-child(3) .pp-stat-n');
+  if(el)el.textContent=12+resolved;
+}
+document.querySelectorAll('.alert-btn.resolve').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    const item=this.closest('.alert-item');
+    item.style.opacity='.35';item.style.pointerEvents='none';item.classList.add('resolved');
+    this.textContent='✓ Resolved';updateAlertStats();
+    showToast('Alert resolved','var(--green)');
+  });
+});
+document.querySelectorAll('.alert-btn.read').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    const item=this.closest('.alert-item');
+    const pri=item.querySelector('.priority-high');
+    if(pri){pri.style.opacity='.4';pri.style.textDecoration='line-through';}
+    this.textContent='Read';this.style.opacity='.5';this.disabled=true;
+    showToast('Alert marked as read');
+  });
+});
+
+// â”€â”€ MINI-GRAPHIC BARS: hover tooltips â”€â”€
+document.querySelectorAll('.mini-bar-item').forEach(item=>{
+  item.addEventListener('mouseenter',()=>{
+    const label=item.querySelector('.mini-bar-label')?.textContent||'';
+    const val=item.querySelector('.mini-bar-val')?.textContent||'';
+    showTip(item,`${label}: ${val}`);
+  });
+});
+
+// â”€â”€ MINI CALENDAR CELLS: hover tip â”€â”€
+document.querySelectorAll('.mini-cal-cell').forEach((cell,i)=>{
+  const day=cell.textContent.trim();
+  const status=cell.classList.contains('booked')?'Fully Booked':cell.classList.contains('partial')?'Partially Booked':'Available';
+  showTip(cell,`Nov ${day||i+1}: ${status}`);
+});
+
+// â”€â”€ FEATURE CARDS: click to scroll to live panel â”€â”€
+const featPanelMap={'fc-1':'p-agent-bookings','fc-2':'p-ledger','fc-3':'p-ledger','fc-4':'p-transport','fc-5':'p-whatsapp','fc-6':'p-alerts'};
+document.querySelectorAll('.feat-card').forEach(card=>{
+  const fcClass=Array.from(card.classList).find(c=>c.startsWith('fc-'));
+  if(!fcClass||!featPanelMap[fcClass])return;
+  card.style.cursor='pointer';
+  card.addEventListener('click',()=>{
+    const panelId=featPanelMap[fcClass];
+    document.querySelectorAll('.ps-tab').forEach(t=>{if(t.dataset.panel===panelId)t.click();});
+    const pagesEl=document.getElementById('pages');
+    if(pagesEl)pagesEl.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  showTip(card,'Click to see it live');
+});
+
+// â”€â”€ ANALYTICS: clickable bars drill-down â”€â”€
+document.querySelectorAll('.an-card').forEach(card=>{
+  card.querySelectorAll('.an-bar-item').forEach(item=>{
+    item.style.cursor='pointer';
+    item.addEventListener('click',()=>{
+      const name=item.querySelector('.an-bar-top span')?.textContent||'';
+      const val=item.querySelectorAll('.an-bar-top span')[1]?.textContent||'';
+      showToast(`${name}: ${val}`,'var(--purple)');
+      // pulse the bar fill
+      const fill=item.querySelector('.an-bar-fill');
+      if(fill){const ow=fill.style.width;fill.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{fill.style.width=ow;fill.style.transition='width .6s cubic-bezier(.22,1,.36,1)';}));}
+    });
+  });
+});
+
+
+// â”€â”€ HERO STAT click: navigate â”€â”€
+document.querySelectorAll('.d-stat').forEach((stat,i)=>{
+  const targets=['p-agent-bookings','p-agent-bookings','p-commission','p-ledger'];
+  stat.addEventListener('click',()=>{
+    document.querySelectorAll('.ps-tab').forEach(t=>{if(t.dataset.panel===targets[i])t.click();});
+  });
+  showTip(stat,'Click to open panel');
+});
+
+// â”€â”€ INITIAL bar animation on page load â”€â”€
+setTimeout(()=>{
+  document.querySelectorAll('.mini-bar-fill,.an-bar-fill,.l-progress-fill,.camp-fill').forEach(b=>{
+    const w=b.getAttribute('data-w');
+    if(w){b.style.width='0';requestAnimationFrame(()=>requestAnimationFrame(()=>{b.style.width=w;b.style.transition='width .9s cubic-bezier(.22,1,.36,1)';}));}
+  });
+},300);
+
+// ── PANEL ACTION BUTTONS ──
+(function(){
+  // CSS for button states
+  document.head.insertAdjacentHTML('beforeend',`<style>
+.pp-action-btn{transition:all .2s}
+.pp-action-btn.done{background:var(--green)!important;border-color:var(--green)!important;color:#fff!important;box-shadow:0 3px 12px rgba(22,163,74,.25)!important;pointer-events:none}
+.pp-action-btn.done.pp-btn:not(.primary){background:rgba(22,163,74,.1)!important;color:var(--green)!important;border:1px solid rgba(22,163,74,.3)!important;box-shadow:none!important}
+.pp-action-btn.filtering{background:var(--purple-pale)!important;color:var(--purple)!important;border:1px solid var(--purple-dim)!important;font-weight:600!important}
+.pp-action-btn.filtering.pp-btn.primary{background:var(--purple)!important;color:#fff!important}
+</style>`);
+
+  document.querySelectorAll('.pp-action-btn').forEach(btn => {
+    const action = btn.dataset.action;
+    const doneLabel = btn.dataset.done;
+    const origLabel = btn.textContent;
+
+    if(action === 'filter'){
+      // Filter: toggle active state, show/hide rows
+      btn.addEventListener('click', function(){
+        const isOn = this.classList.toggle('filtering');
+        if(isOn){
+          this.textContent = 'Filter: On ▴';
+          // visually dim lower-priority rows as a demo effect
+          const panel = this.closest('.page-panel');
+          panel && panel.querySelectorAll('.pp-tr').forEach((tr,i)=>{
+            if(i>0) tr.style.opacity = tr.style.opacity==='0.45'?'1':'0.45';
+          });
+        } else {
+          this.textContent = origLabel;
+          const panel = this.closest('.page-panel');
+          panel && panel.querySelectorAll('.pp-tr').forEach(tr=>tr.style.opacity='1');
+        }
+      });
+      return;
+    }
+
+    // Export / Add / Confirm: flash done state then reset
+    btn.addEventListener('click', function(){
+      if(this.classList.contains('done')) return;
+      const orig = this.textContent;
+      this.classList.add('done');
+      this.textContent = doneLabel;
+      setTimeout(()=>{
+        this.classList.remove('done');
+        this.textContent = orig;
+      }, 2200);
+    });
+  });
+})();
+
+// ── TESTIMONIAL CAROUSEL ──
+(function(){
+  const track=document.getElementById('testi-track');
+  const dots=[...document.querySelectorAll('.testi-dot')];
+  if(!track||!dots.length)return;
+  const slides=[...track.querySelectorAll('.testi-slide')];
+  let cur=0;
+  function goTo(i){
+    cur=i;
+    track.style.transition='transform .6s cubic-bezier(.22,1,.36,1)';
+    track.style.transform=`translateX(calc(-${i*100}% - ${i*20}px))`;
+    dots.forEach((d,di)=>d.classList.toggle('on',di===i));
+  }
+  dots.forEach(d=>d.addEventListener('click',()=>goTo(+d.dataset.i)));
+  // auto-advance
+  setInterval(()=>goTo((cur+1)%slides.length),4000);
+})();
+
+// ── HERO TYPEWRITER ──
+(function(){
+  const phrases=[
+    'turn agent enquiries into bookings.',
+    'keep commissions and payments on track.',
+    'spend less time chasing vendors.',
+    'keep transport and operations in sync.',
+    'reach agents and guests through WhatsApp.',
+    'bring your hotel\'s B2B operations together.',
+  ];
+  const el=document.getElementById('hero-type');
+  if(!el)return;
+  let pi=0,ci=0,deleting=false;
+  function tick(){
+    const phrase=phrases[pi];
+    if(!deleting){
+      el.textContent=phrase.slice(0,ci+1);
+      ci++;
+      if(ci===phrase.length){deleting=true;setTimeout(tick,1800);return;}
+    } else {
+      el.textContent=phrase.slice(0,ci-1);
+      ci--;
+      if(ci===0){deleting=false;pi=(pi+1)%phrases.length;setTimeout(tick,300);return;}
+    }
+    setTimeout(tick,deleting?40:60);
+  }
+  setTimeout(tick,800);
+})();
+
+// ── ROTATING PHRASES + WHEEL ──
+(function(){
+  const phrases=[
+    'turned enquiries into bookings.',
+    'connected a payment gateway.',
+    'kept commissions on track.',
+    'knew what was paid and pending.',
+    'coordinated every vendor.',
+    'spent less time chasing vendors.',
+    'kept every journey on schedule.',
+    'managed corporate accounts.',
+    'kept the hotel team in sync.',
+    'connected WhatsApp Business.',
+    'kept transport on schedule.',
+    'stayed connected with agents.',
+    'reached more people by WhatsApp.',
+    'turned feedback into better stays.',
+  ];
+  const activeEl=document.getElementById('rot-active');
+  const wheelEl=document.getElementById('rot-wheel');
+  if(!activeEl||!wheelEl)return;
+  const N=phrases.length;
+  // visible slots above/below centre
+  const SLOTS=3;
+  let cur=0;
+
+  // build wheel items once
+  const items=phrases.map((p,i)=>{
+    const el=document.createElement('span');
+    el.className='rot-wheel-item';
+    el.textContent=p;
+    wheelEl.appendChild(el);
+    return el;
+  });
+
+  // slot heights: centre=0, each slot ±28px
+  const SLOT_H=34;
+
+  function updateWheel(){
+    items.forEach((el,i)=>{
+      // relative position in circular sense
+      let rel=i-cur;
+      // wrap to [-N/2, N/2]
+      if(rel>N/2) rel-=N;
+      if(rel<-N/2) rel+=N;
+      const absRel=Math.abs(rel);
+      if(absRel>SLOTS){
+        el.style.opacity='0';
+        el.style.pointerEvents='none';
+        return;
+      }
+      const y=rel*SLOT_H;
+      const isCentre=rel===0;
+      // opacity: centre=1, ±1=0.45, ±2=0.22, ±3=0.1
+      const opacity=isCentre?0.28:[0.22,0.15,0.08][absRel-1]||0;
+      const fs=isCentre?'clamp(27px,2.2vw,30px)':'clamp(25px,1.9vw,27px)';
+      const fw='400';
+      el.style.transform=`translateY(calc(-50% + ${y}px))`;
+      el.style.opacity=opacity;
+      el.style.fontSize=fs;
+      el.style.fontWeight=fw;
+      el.style.pointerEvents='auto';
+    });
+  }
+
+  function showPhrase(){
+    activeEl.classList.remove('active');
+    activeEl.textContent=phrases[cur];
+    void activeEl.offsetWidth;
+    activeEl.classList.add('active');
+  }
+
+  function next(){
+    cur=(cur+1)%N;
+    updateWheel();
+    showPhrase();
+  }
+
+  // init
+  updateWheel();
+  showPhrase();
+  setInterval(next,3200);
+})();
+
+// ── FAQ ──
+document.querySelectorAll('.bas-faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.bas-faq-item');
+    if (item.classList.contains('bas-open')) return;
+    document.querySelectorAll('.bas-faq-item.bas-open').forEach(i => {
+      i.classList.remove('bas-open');
+      i.querySelector('.bas-faq-q').setAttribute('aria-expanded','false');
+    });
+    item.classList.add('bas-open');
+    btn.setAttribute('aria-expanded','true');
+  });
+});
+</script>
+</body>
+</html>
+
