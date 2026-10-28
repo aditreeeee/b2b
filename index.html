@@ -68,7 +68,7 @@
 :root{
   --bg:#f7f6ff;--bg2:#f0eeff;--white:#fff;
   --purple:#5b3de8;--purple2:#7c5cf4;--purple-pale:#ede9ff;--purple-dim:#d4ccf7;
-  --navy:#18134a;--mid:#4b4580;--muted:#6b6899;--muted2:#9b98b8;
+  --navy:#18134a;--mid:#4b4580;--muted:#58567e;--muted2:#9b98b8;
   --line:rgba(91,61,232,.1);--line2:rgba(91,61,232,.06);
   --green:#16a34a;--amber:#d97706;--rose:#dc2626;
   --r:10px;--r-lg:16px;--r-xl:22px;
@@ -209,6 +209,13 @@ svg{display:block;flex-shrink:0}
 .strip{overflow:hidden;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);background:var(--white)}
 .strip-track{display:flex;animation:sl 26s linear infinite;white-space:nowrap}
 .strip-track:hover{animation-play-state:paused}
+/* audience marquee */
+.aud-strip{background:var(--purple-pale);border-top:1px solid var(--purple-dim);border-bottom:1px solid var(--purple-dim);padding:13px 0;overflow:hidden;position:relative}
+.aud-strip-inner{display:flex;animation:sl 32s linear infinite;white-space:nowrap;align-items:center}
+.aud-strip-inner.rev{animation-direction:reverse;animation-duration:36s}
+.aud-item{display:inline-flex;align-items:center;gap:10px;padding:0 28px;font-size:12px;font-weight:500;color:var(--navy);letter-spacing:.02em;text-transform:uppercase}
+.aud-item::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--purple);flex-shrink:0;opacity:.5}
+.aud-item b{font-weight:600;color:var(--navy)}
 @keyframes sl{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .s-item{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;font-size:13px;font-weight:500;color:var(--mid);border-right:1px solid var(--line2);flex-shrink:0}
 .s-dot{width:4px;height:4px;border-radius:50%;background:var(--purple)}
@@ -251,7 +258,7 @@ svg{display:block;flex-shrink:0}
 .mini-tag{padding:3px 10px;border-radius:100px;font-size:11px;font-weight:500;background:var(--purple-pale);color:var(--purple)}
 /* feat-card image bg */
 .feat-card{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative}
-.feat-card::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.93);pointer-events:none;z-index:0}
+.feat-card::before{display:none}
 .feat-card>*{position:relative;z-index:1}
 .feat-card .feat-h{color:#0f0d2e}
 .feat-card .feat-desc{color:#1a1640}
@@ -261,12 +268,7 @@ svg{display:block;flex-shrink:0}
 .feat-card .mini-bar-val{color:#0f0d2e}
 .feat-card .mini-stat-l{color:#2a2560}
 .feat-card .mini-stat-n{color:#0f0d2e}
-.fc-1{background-image:url('imgs/img-travel agents.png')}
-.fc-2{background-image:url('imgs/img- city ledger.png')}
-.fc-3{background-image:url('imgs/img- packages.png')}
-.fc-4{background-image:url('imgs/img- fleet.png')}
-.fc-5{background-image:url('imgs/img- marketing.png')}
-.fc-6{background-image:url('imgs/img-vendor.png')}
+.fc-1,.fc-2,.fc-3,.fc-4,.fc-5,.fc-6{background-image:none}
 
 /* â”€â”€ WORKING PAGES â”€â”€ */
 .pages-sec{background:var(--white);padding:72px 56px}
@@ -612,38 +614,41 @@ section{position:relative}
 }
 
 /* ── ROTATING STATEMENT + TESTIMONIALS ── */
-.rot-sec{background:var(--bg);padding:72px 56px 40px;overflow:hidden}
-.rot-layout{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;max-width:1100px;margin:0 auto}
+.rot-sec{background:var(--bg);padding:28px 56px;overflow:hidden}
+.rot-layout{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;gap:56px}
 .rot-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--purple);margin-bottom:20px}
 .rot-heading{font-family:'Roboto Slab','Georgia',serif;font-size:clamp(36px,4vw,54px);font-weight:700;color:var(--navy);line-height:1.1;margin-bottom:4px}
 @keyframes phraseIn{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
-.rot-phrase-wrap{display:block;margin-bottom:32px}
+.rot-phrase-wrap{display:block;margin-bottom:0}
 .rot-phrase{display:block;color:var(--purple);font-family:'Roboto Slab','Georgia',serif;font-size:clamp(36px,4vw,54px);font-weight:700;line-height:1.15;opacity:0}
 .rot-phrase.active{animation:phraseIn .55s cubic-bezier(.22,1,.36,1) forwards}
-.rot-stats{display:flex;gap:24px;margin-top:0}
-.rot-stats-card{display:flex;gap:24px;background:var(--white);border:1px solid var(--line2);border-radius:var(--r-lg);padding:16px 20px 16px 0;justify-content:flex-end}
-.rot-stat{border-left:2px solid var(--purple-dim);padding-left:14px}.rot-stat:first-child{border-left:none;padding-left:0}
-.rot-stat-n{font-family:'Roboto Slab','Georgia',serif;font-size:26px;font-weight:700;color:var(--navy);line-height:1}
-.rot-stat-l{font-size:11px;color:var(--muted);margin-top:3px}
-/* wheel */
-.rot-wheel{position:relative;height:240px;overflow:hidden;display:flex;align-items:center;justify-content:flex-end}
-.rot-wheel-item{position:absolute;right:0;top:50%;font-family:'Roboto Slab','Georgia',serif;font-weight:400;color:var(--purple);text-align:right;line-height:1.3;white-space:nowrap;transition:transform .6s cubic-bezier(.22,1,.36,1),opacity .6s,font-size .6s}
+.rot-stats-card{display:flex;flex-direction:row;gap:0;background:var(--white);border:1px solid var(--line2);border-radius:var(--r-lg);padding:20px 8px;flex-shrink:0;align-items:center;text-align:center}
+.rot-stat{display:flex;flex-direction:column;align-items:center;padding:0 28px;flex:1}
+.rot-stat:not(:last-child){border-right:1px solid var(--line2);border-bottom:none}
+.rot-stat-n{font-family:'Roboto Slab','Georgia',serif;font-size:28px;font-weight:700;color:var(--navy);line-height:1}
+.rot-stat-l{font-size:11px;color:var(--muted);margin-top:4px}
 /* testimonial carousel */
-.testi-sec{background:var(--bg);padding:0 56px 32px;overflow:hidden;margin-top:0}
-.testi-divider{border:none;border-top:1px solid var(--line);margin:0 0 32px}
+.testi-sec{background:var(--bg);padding:0 56px 24px;overflow:hidden;margin-top:0}
+.testi-divider{border:none;border-top:1px solid var(--line);margin:0 0 24px}
 .testi-track-wrap{max-width:1100px;margin:0 auto;overflow:hidden;position:relative}
 .testi-track-wrap::before,.testi-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:48px;z-index:2;pointer-events:none}
 .testi-track-wrap::before{left:0;background:linear-gradient(to right,var(--bg),transparent)}
 .testi-track-wrap::after{right:0;background:linear-gradient(to left,var(--bg),transparent)}
 .testi-track{display:flex;gap:20px;will-change:transform}
 .testi-slide{display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:0 0 100%}
-.testi-card{background:var(--white);border:1px solid var(--line2);border-radius:var(--r-lg);padding:24px;display:flex;flex-direction:column;gap:12px}
-.testi-q{font-size:13px;color:var(--mid);line-height:1.7;flex:1}
-.testi-q em{font-style:normal;color:var(--purple);font-weight:500}
-.testi-author{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line2)}
-.testi-avatar{width:32px;height:32px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
-.testi-name{font-size:12px;font-weight:600;color:var(--navy)}
-.testi-role{font-size:11px;color:var(--muted)}
+.testi-card{background:var(--white);border:1px solid var(--line2);border-radius:var(--r-lg);padding:22px 24px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+.testi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--purple),var(--purple2));opacity:0;transition:opacity .25s}
+.testi-card:hover::before{opacity:1}
+.testi-card-top{display:flex;align-items:flex-start;justify-content:space-between}
+.testi-stars{display:flex;gap:3px;padding-top:4px}
+.testi-star{width:14px;height:14px;fill:#f59e0b}
+.testi-quote-mark{font-family:'Roboto Slab','Georgia',serif;font-size:56px;line-height:.75;color:var(--purple-dim);font-weight:700;user-select:none}
+.testi-q{font-size:14px;color:var(--mid);line-height:1.85;flex:1;font-style:italic}
+.testi-q em{font-style:normal;color:var(--purple);font-weight:600;background:var(--purple-pale);padding:1px 5px;border-radius:3px}
+.testi-author{display:flex;align-items:center;gap:12px;margin-top:auto;padding-top:16px;border-top:1px solid var(--line2)}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;border:2px solid var(--purple-pale)}
+.testi-name{font-size:13px;font-weight:600;color:var(--navy)}
+.testi-role{font-size:11px;color:var(--muted);margin-top:1px}
 .testi-dots{display:flex;justify-content:center;gap:6px;margin-top:20px}
 .testi-dot{width:6px;height:6px;border-radius:50%;background:var(--purple-dim);border:none;padding:0;cursor:pointer;transition:background .2s,transform .2s}
 .testi-dot.on{background:var(--purple);transform:scale(1.3)}
@@ -682,7 +687,7 @@ section{position:relative}
   <div class="hero-inner">
     <div class="hero-top-row">
       <div class="hero-text-col">
-        <div class="hero-eye"><span class="hero-dot"></span>One Connected Platform for Hotel Operations</div>
+
         <h1>Run your hotel business<br>from one place.</h1>
         <p class="hero-h2-type">One platform to <span id="hero-type" class="tx-purple"></span><span class="hero-cursor">|</span></p>
         <p class="hero-sub">From B2B bookings and agent commissions to corporate accounts, transport, marketing and vendor coordination, B2BStays brings your hotel operations together in one place.</p>
@@ -990,6 +995,61 @@ section{position:relative}
 
 <div class="sec-divider"></div>
 
+<!-- AUDIENCE MARQUEE TOP -->
+<div class="aud-strip" aria-hidden="true">
+  <div class="aud-strip-inner">
+    <span class="aud-item"><b>Independent Hotels</b></span>
+    <span class="aud-item"><b>Hotel Chains</b></span>
+    <span class="aud-item"><b>DMCs</b></span>
+    <span class="aud-item"><b>Fleet Operators</b></span>
+    <span class="aud-item"><b>Corporate Account Teams</b></span>
+    <span class="aud-item"><b>Travel Agents</b></span>
+    <span class="aud-item"><b>Resort Properties</b></span>
+    <span class="aud-item"><b>Boutique Hotels</b></span>
+    <span class="aud-item"><b>B2B Sales Teams</b></span>
+    <span class="aud-item"><b>Accounts &amp; Finance Teams</b></span>
+    <span class="aud-item"><b>Operations Managers</b></span>
+    <span class="aud-item"><b>Revenue Managers</b></span>
+    <span class="aud-item"><b>General Managers</b></span>
+    <span class="aud-item"><b>Front Desk Teams</b></span>
+    <span class="aud-item"><b>Vendor Coordinators</b></span>
+    <span class="aud-item"><b>Transport &amp; Fleet Desks</b></span>
+    <span class="aud-item"><b>Marketing Teams</b></span>
+    <span class="aud-item"><b>OTA Partners</b></span>
+    <span class="aud-item"><b>City Ledger Teams</b></span>
+    <span class="aud-item"><b>Hospitality Groups</b></span>
+    <span class="aud-item"><b>Commission Managers</b></span>
+    <span class="aud-item"><b>WhatsApp Campaign Teams</b></span>
+    <span class="aud-item"><b>Service Apartments</b></span>
+    <span class="aud-item"><b>Heritage Properties</b></span>
+    <!-- duplicate for seamless loop -->
+    <span class="aud-item"><b>Independent Hotels</b></span>
+    <span class="aud-item"><b>Hotel Chains</b></span>
+    <span class="aud-item"><b>DMCs</b></span>
+    <span class="aud-item"><b>Fleet Operators</b></span>
+    <span class="aud-item"><b>Corporate Account Teams</b></span>
+    <span class="aud-item"><b>Travel Agents</b></span>
+    <span class="aud-item"><b>Resort Properties</b></span>
+    <span class="aud-item"><b>Boutique Hotels</b></span>
+    <span class="aud-item"><b>B2B Sales Teams</b></span>
+    <span class="aud-item"><b>Accounts &amp; Finance Teams</b></span>
+    <span class="aud-item"><b>Operations Managers</b></span>
+    <span class="aud-item"><b>Revenue Managers</b></span>
+    <span class="aud-item"><b>General Managers</b></span>
+    <span class="aud-item"><b>Front Desk Teams</b></span>
+    <span class="aud-item"><b>Vendor Coordinators</b></span>
+    <span class="aud-item"><b>Transport &amp; Fleet Desks</b></span>
+    <span class="aud-item"><b>Marketing Teams</b></span>
+    <span class="aud-item"><b>OTA Partners</b></span>
+    <span class="aud-item"><b>City Ledger Teams</b></span>
+    <span class="aud-item"><b>Hospitality Groups</b></span>
+    <span class="aud-item"><b>Commission Managers</b></span>
+    <span class="aud-item"><b>WhatsApp Campaign Teams</b></span>
+    <span class="aud-item"><b>Service Apartments</b></span>
+    <span class="aud-item"><b>Heritage Properties</b></span>
+  </div>
+</div>
+
 <!-- HOW IT WORKS -->
 <section class="setup" id="setup">
   <div class="sec-in">
@@ -1061,19 +1121,18 @@ section{position:relative}
 <!-- ROTATING STATEMENT + TESTIMONIALS -->
 <section class="rot-sec">
   <div class="rot-layout">
-    <!-- LEFT: rotating headline + stats -->
-    <div class="reveal-l">
-      <div class="rot-label">Your hotel at its best</div>
+    <!-- LEFT: rotating headline -->
+    <div class="reveal-l" style="flex:1">
+      <div class="rot-label">Your hotel with b2bstays.in</div>
       <div class="rot-heading">This month, your hotel</div>
       <span class="rot-phrase-wrap"><span class="rot-phrase active" id="rot-active"></span></span>
     </div>
-    <!-- RIGHT: wheel + stats -->
-    <div class="reveal-r" style="display:flex;flex-direction:column;gap:0">
-      <div class="rot-wheel" id="rot-wheel" aria-hidden="true"></div>
+    <!-- RIGHT: stats card inline -->
+    <div class="reveal-r" style="flex-shrink:0">
       <div class="rot-stats-card">
-        <div class="rot-stat"><div class="rot-stat-n">50+</div><div class="rot-stat-l">hotels onboarded</div></div>
-        <div class="rot-stat"><div class="rot-stat-n">&#8377;2Cr+</div><div class="rot-stat-l">commissions tracked</div></div>
-        <div class="rot-stat"><div class="rot-stat-n">10k+</div><div class="rot-stat-l">bookings managed</div></div>
+        <div class="rot-stat"><div class="rot-stat-n">50+</div><div class="rot-stat-l">Hotels onboarded</div></div>
+        <div class="rot-stat"><div class="rot-stat-n">&#8377;2Cr+</div><div class="rot-stat-l">Commissions tracked</div></div>
+        <div class="rot-stat"><div class="rot-stat-n">10k+</div><div class="rot-stat-l">Bookings managed</div></div>
       </div>
     </div>
   </div>
@@ -1086,14 +1145,22 @@ section{position:relative}
       <!-- slide 1 -->
       <div class="testi-slide">
         <div class="testi-card">
-          <p class="testi-q">&ldquo;Before B2BStays our accounts team spent half the week <em>reconciling agent payments manually</em>. Now it takes under an hour.&rdquo;</p>
+          <div class="testi-card-top">
+            <div class="testi-quote-mark">&ldquo;</div>
+            <div class="testi-stars"><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg></div>
+          </div>
+          <p class="testi-q">Before B2BStays, our accounts team spent <em>half the week reconciling agent payments manually</em>. Spreadsheets, calls back and forth, constant errors. Now the same work takes under an hour. The commission module alone has saved us more than we ever expected.</p>
           <div class="testi-author">
             <div class="testi-avatar">R</div>
             <div><div class="testi-name">Rajeev Menon</div><div class="testi-role">GM, Harbour View Hotel &middot; Kochi</div></div>
           </div>
         </div>
         <div class="testi-card">
-          <p class="testi-q">&ldquo;Our travel agents now get payment links instantly. <em>No calls, no follow-ups.</em> The city ledger alone was worth switching for.&rdquo;</p>
+          <div class="testi-card-top">
+            <div class="testi-quote-mark">&ldquo;</div>
+            <div class="testi-stars"><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg></div>
+          </div>
+          <p class="testi-q">Our travel agents now receive payment links the moment a booking is confirmed. <em>No calls, no follow-up emails, no chasing.</em> Disputes dropped to near zero. The city ledger feature alone justified the switch — everything else was a bonus.</p>
           <div class="testi-author">
             <div class="testi-avatar" style="background:#16a34a">P</div>
             <div><div class="testi-name">Priya Suresh</div><div class="testi-role">Revenue Manager, The Sterling Residency</div></div>
@@ -1103,14 +1170,22 @@ section{position:relative}
       <!-- slide 2 -->
       <div class="testi-slide">
         <div class="testi-card">
-          <p class="testi-q">&ldquo;WhatsApp campaigns used to mean someone <em>copy-pasting for two hours</em>. Now we schedule 200 sends in five minutes.&rdquo;</p>
+          <div class="testi-card-top">
+            <div class="testi-quote-mark">&ldquo;</div>
+            <div class="testi-stars"><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg></div>
+          </div>
+          <p class="testi-q">WhatsApp campaigns used to mean one person <em>copy-pasting numbers for two hours</em> before a single message went out. Now we schedule 200 sends in five minutes, track who opened, and follow up automatically. Our agents actually respond now.</p>
           <div class="testi-author">
             <div class="testi-avatar" style="background:#d97706">A</div>
             <div><div class="testi-name">Anand Pillai</div><div class="testi-role">Sales Head, Calicut Grand Hotel</div></div>
           </div>
         </div>
         <div class="testi-card">
-          <p class="testi-q">&ldquo;Fleet coordination was a <em>constant headache across shifts</em>. B2BStays gives every driver and dispatcher the same live view.&rdquo;</p>
+          <div class="testi-card-top">
+            <div class="testi-quote-mark">&ldquo;</div>
+            <div class="testi-stars"><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg><svg class="testi-star" viewBox="0 0 20 20"><path d="M10 1l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.27l-4.78 2.51.91-5.32L2.27 6.62l5.34-.78z"/></svg></div>
+          </div>
+          <p class="testi-q">Fleet coordination was a <em>constant headache across every shift</em> — drivers out of sync, dispatchers guessing, guests waiting. B2BStays gives every driver and dispatcher the same live view of assignments. Complaints dropped immediately after we went live.</p>
           <div class="testi-author">
             <div class="testi-avatar" style="background:#0891b2">S</div>
             <div><div class="testi-name">Sreejith Nair</div><div class="testi-role">Operations Manager, Palmview Resorts</div></div>
@@ -1318,14 +1393,25 @@ const io=new IntersectionObserver(e=>e.forEach(x=>{
       countUp(el,orig);
     });
   }
-}),{threshold:.08,rootMargin:'0px 0px -28px 0px'});
+}),{threshold:.12,rootMargin:'0px 0px -60px 0px'});
 // pre-save widths before CSS zeroes them
 document.querySelectorAll('.mini-bar-fill,.an-bar-fill,.l-progress-fill,.camp-fill').forEach(b=>{
   const w=b.style.width;if(w&&w!=='0%')b.setAttribute('data-w',w);
 });
-document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-scale,.stagger,.stagger-wrap,.sec-eye').forEach(el=>io.observe(el));
-// Fallback: reveal anything still hidden after 1.2s (e.g. already in viewport on load)
-setTimeout(()=>{document.querySelectorAll('.reveal:not(.in),.reveal-l:not(.in),.reveal-r:not(.in),.reveal-scale:not(.in),.stagger:not(.in),.stagger-wrap:not(.in),.sec-eye:not(.in)').forEach(el=>el.classList.add('in'));},1200);
+const revealEls=document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-scale,.stagger,.stagger-wrap,.sec-eye');
+revealEls.forEach(el=>io.observe(el));
+
+// Scroll-based fallback for file:// or throttled IO
+function checkReveal(){
+  const vh=window.innerHeight;
+  revealEls.forEach(el=>{
+    if(el.classList.contains('in'))return;
+    const r=el.getBoundingClientRect();
+    if(r.top<vh-40) el.classList.add('in');
+  });
+}
+window.addEventListener('scroll',checkReveal,{passive:true});
+checkReveal(); // check on load for above-fold items
 
 // â”€â”€ HERO PARALLAX â”€â”€
 (function(){
@@ -1937,51 +2023,9 @@ setTimeout(()=>{
     'turned feedback into better stays.',
   ];
   const activeEl=document.getElementById('rot-active');
-  const wheelEl=document.getElementById('rot-wheel');
-  if(!activeEl||!wheelEl)return;
+  if(!activeEl)return;
   const N=phrases.length;
-  // visible slots above/below centre
-  const SLOTS=3;
   let cur=0;
-
-  // build wheel items once
-  const items=phrases.map((p,i)=>{
-    const el=document.createElement('span');
-    el.className='rot-wheel-item';
-    el.textContent=p;
-    wheelEl.appendChild(el);
-    return el;
-  });
-
-  // slot heights: centre=0, each slot ±28px
-  const SLOT_H=34;
-
-  function updateWheel(){
-    items.forEach((el,i)=>{
-      // relative position in circular sense
-      let rel=i-cur;
-      // wrap to [-N/2, N/2]
-      if(rel>N/2) rel-=N;
-      if(rel<-N/2) rel+=N;
-      const absRel=Math.abs(rel);
-      if(absRel>SLOTS){
-        el.style.opacity='0';
-        el.style.pointerEvents='none';
-        return;
-      }
-      const y=rel*SLOT_H;
-      const isCentre=rel===0;
-      // opacity: centre=1, ±1=0.45, ±2=0.22, ±3=0.1
-      const opacity=isCentre?0.28:[0.22,0.15,0.08][absRel-1]||0;
-      const fs=isCentre?'clamp(27px,2.2vw,30px)':'clamp(25px,1.9vw,27px)';
-      const fw='400';
-      el.style.transform=`translateY(calc(-50% + ${y}px))`;
-      el.style.opacity=opacity;
-      el.style.fontSize=fs;
-      el.style.fontWeight=fw;
-      el.style.pointerEvents='auto';
-    });
-  }
 
   function showPhrase(){
     activeEl.classList.remove('active');
@@ -1992,12 +2036,10 @@ setTimeout(()=>{
 
   function next(){
     cur=(cur+1)%N;
-    updateWheel();
     showPhrase();
   }
 
   // init
-  updateWheel();
   showPhrase();
   setInterval(next,3200);
 })();
